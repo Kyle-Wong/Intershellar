@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShellPickUp : MonoBehaviour {
     //Change MoveTest to name of script with GainShell() method
+    public MoveTest shellAdder2;
     public Player_Movement shellAdder;
     public int worth;
 
@@ -24,8 +25,12 @@ public class ShellPickUp : MonoBehaviour {
         {
             Destroy(gameObject);
             
-            //Change Player_Movement
-            shellAdder.Gain_Shell(worth);
+            //Delete this
+            shellAdder2.AddShell(worth);
+            Debug.Log("GotShell");
+
+            //Uncomment when Gain Thing
+            //shellAdder.Gain_Shell(worth);
         }
         Debug.Log("Hit");
     }
