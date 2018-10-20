@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShellPickUp : MonoBehaviour {
+    public MoveTest shellAdder;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,10 @@ public class ShellPickUp : MonoBehaviour {
         if (other.tag == "Player")
         {
             Destroy(gameObject);
+            shellAdder.AddShell();
+
+            //Actual method to gain shell below
+            //shellAdder.GainShell();
         }
         Debug.Log("Hit");
     }
