@@ -50,7 +50,7 @@ public class Player_Movement : MonoBehaviour {
     //Activates when crab collides with detached shell. Places shell on top of stack.
     public void Gain_Shell(int worth)
     {
-        timer = 10f;
+        timer = timing;
         for (int i = 0; i < worth; i++)
         {
             stacker.addShell();
