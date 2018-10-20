@@ -19,7 +19,6 @@ public class Player_Movement : MonoBehaviour {
     public int startingShells;
     private bool began = false;
 
-    public ParticleSystem dashParticle;
     public Sprite nakedSprite;
     private ShellList shellList;
     private int mySpriteId = -1;
