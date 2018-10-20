@@ -142,7 +142,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58275082702800686
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -172,6 +172,7 @@ MonoBehaviour:
   shellPrefabs:
   - {fileID: 4021308637457750, guid: 023394077ad654043aa7a1ad44b21bd6, type: 2}
   yOffset: 0.5
+  firstYOffset: 0.6
   rngAngle: 30
 --- !u!114 &114495454868360304
 MonoBehaviour:
@@ -191,6 +192,9 @@ MonoBehaviour:
   playerLeapVelocity: 5
   shellShotSpeed: 5
   shellCount: 5
+  startingShells: 3
+  dashParticle: {fileID: 0}
+  nakedSprite: {fileID: 21300000, guid: 8dd6b7ed44ae98a449b0b671a1225d01, type: 3}
 --- !u!212 &212301323112787986
 SpriteRenderer:
   m_ObjectHideFlags: 1
