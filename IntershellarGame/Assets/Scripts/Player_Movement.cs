@@ -25,15 +25,18 @@ public class Player_Movement : MonoBehaviour {
     SpriteRenderer spriteRenderer;
     public Transform projectileParticles;
     public Transform hurtParticles;
+    private Rigidbody2D rb;
 	// Use this for initialization
 	void Start () {
         shellCount = 0;
+        rb = GetComponent<Rigidbody2D>();
         shellList = GameObject.FindGameObjectWithTag("ShellData").GetComponent<ShellList>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         velocity = new Vector3(0, 0, 0);
         timing = timer;
         stacker = GetComponent<ShellStack>();
         Gain_Shell(startingShells,-1);
+        
 	}
 	
 	// Update is called once per frame
@@ -45,8 +48,6 @@ public class Player_Movement : MonoBehaviour {
             transform.Rotate(0, 0, rotating);
         }
         */
-        transform.position += velocity * Time.deltaTime;
-        velocity *= drag;
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(0, 0, rotation_speed);
@@ -96,7 +97,6 @@ public class Player_Movement : MonoBehaviour {
     }
     public void NoShells()
     {
-        Debug.Log(timer);
         if (shellCount == 0)
         {
             timer -= Time.deltaTime;
@@ -139,7 +139,7 @@ public class Player_Movement : MonoBehaviour {
         Transform particles = Instantiate(projectileParticles, shellPosition, Quaternion.LookRotation(transform.forward, playerDir));
         Transform shellObject = Instantiate(shellProjectilePrefab, shellPosition, Quaternion.LookRotation(transform.forward,playerDir));
         shellObject.GetComponent<Projectile>().setVelocity(-1 * playerDir * shellShotSpeed);
-        velocity = playerDir * playerLeapVelocity;
+        rb.velocity = playerDir * playerLeapVelocity;
         shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
         Lose_Shell();
         //dash self
