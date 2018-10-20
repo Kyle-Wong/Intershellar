@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShellStack : MonoBehaviour {
 
     // Use this for initialization
-    public Transform shellPrefab;
+    public Transform[] shellPrefabs;
     private List<Transform> children;
     public float yOffset;
     public float rngAngle;
@@ -32,7 +32,8 @@ public class ShellStack : MonoBehaviour {
 	}
     public void addShell()
     {
-        Transform newShell = Instantiate(shellPrefab, transform.position,Quaternion.identity);
+        int shellType = (int)Random.Range(0, shellPrefabs.Length);
+        Transform newShell = Instantiate(shellPrefabs[shellType], transform.position,Quaternion.identity);
         randomizeAngle(newShell);
         newShell.parent = transform;
         children.Add(newShell);
