@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Planet : MonoBehaviour {
-	public GameObject player;
+	private GameObject player;
 	public float circleAroundRadius; //the radius when to start circle around
 	public float rangeRadius; //the radius of the range circle
 	public float force;
@@ -12,7 +12,7 @@ public class Planet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 	void OnDrawGizmosSelected()
     {

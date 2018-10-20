@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa380e0e6ca06504393f23e5b2c9ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevelName: SampleScene
+  firstLevelName: GameScene1
   creditsSceneName: CreditsScene
 --- !u!114 &974495020
 MonoBehaviour:
