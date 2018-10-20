@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5273deb4f0cd9d94582e2e694a829b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomizeSprite: 1
   worth: 5
 --- !u!212 &435253790
 SpriteRenderer:
@@ -400,7 +401,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1051403095
+--- !u!1001 &1787843968
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -409,11 +410,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4297042598889558, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.03
+      value: -5.350856
       objectReference: {fileID: 0}
     - target: {fileID: 4297042598889558, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.79
+      value: 0.31595245
       objectReference: {fileID: 0}
     - target: {fileID: 4297042598889558, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -439,6 +440,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
+        type: 2}
+      propertyPath: hurtParticles
+      value: 
+      objectReference: {fileID: 4309292654765818, guid: c09780713fff2764abeb2c436da9afbe,
+        type: 2}
+    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
+        type: 2}
+      propertyPath: projectileParticles
+      value: 
+      objectReference: {fileID: 4286472773735776, guid: 2853c88e54100d54897d818fd1770a75,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
   m_IsPrefabAsset: 0
