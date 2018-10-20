@@ -24,6 +24,6 @@ public class HazardShellRemove : MonoBehaviour {
         {
             shellRemover.removeShell();
         }
-
+        removeShell.Lose_Shell();
     }
 }
