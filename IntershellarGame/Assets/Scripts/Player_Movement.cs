@@ -16,6 +16,8 @@ public class Player_Movement : MonoBehaviour {
     public float shellShotSpeed;
     public int shellCount;
     private bool began = false;
+
+    public ParticleSystem dashParticle;
 	// Use this for initialization
 	void Start () {
         velocity = new Vector3(0, 0, 0);
@@ -102,6 +104,6 @@ public class Player_Movement : MonoBehaviour {
         velocity = playerDir * playerLeapVelocity;
         stacker.removeShell();
         //dash self
-        
+        dashParticle.Play();
     }
 }
