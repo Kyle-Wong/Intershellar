@@ -137,7 +137,7 @@ public class Player_Movement : MonoBehaviour {
             }
         }
         Transform particles = Instantiate(projectileParticles, shellPosition, Quaternion.LookRotation(transform.forward, playerDir));
-        Transform shellObject = Instantiate(shellProjectilePrefab, transform.position, Quaternion.LookRotation(transform.forward,playerDir));
+        Transform shellObject = Instantiate(shellProjectilePrefab, shellPosition, Quaternion.LookRotation(transform.forward,playerDir));
         shellObject.GetComponent<Projectile>().setVelocity(-1 * playerDir * shellShotSpeed);
         velocity = playerDir * playerLeapVelocity;
         shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);

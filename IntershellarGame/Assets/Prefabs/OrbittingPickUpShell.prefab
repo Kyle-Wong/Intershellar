@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
-  angularSpeed: 50
+  angularSpeed: 30
 --- !u!114 &114407894174017124
 MonoBehaviour:
   m_ObjectHideFlags: 1
