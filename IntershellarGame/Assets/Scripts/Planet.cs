@@ -49,9 +49,9 @@ public class Planet : MonoBehaviour {
 			attractVector = new Vector2(0,0);
 		}
 		//finally, attract
-		player.transform.GetComponent<Rigidbody2D>().AddForce(attractVector ,ForceMode2D.Force);
+		player.transform.GetComponent<Rigidbody2D>().AddForce(attractVector * Time.deltaTime * 60,ForceMode2D.Force);
 		Vector2 perpendicularVector = new Vector2(attractDirection.y, - attractDirection.x) * perpendicularForce;
-		player.transform.GetComponent<Rigidbody2D>().AddForce(perpendicularVector ,ForceMode2D.Force);
+		player.transform.GetComponent<Rigidbody2D>().AddForce(perpendicularVector * Time.deltaTime * 60 ,ForceMode2D.Force);
 		
 
 	}
