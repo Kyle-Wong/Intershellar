@@ -7,6 +7,8 @@ public class PlayerShellShot : MonoBehaviour {
 	public int initialRotation;
 	public float projectForce;	
 	public float dashForce;	
+	//
+	public ParticleSystem particle;
 
 	// Use this for initialization
 	void Start () {
@@ -31,8 +33,10 @@ public class PlayerShellShot : MonoBehaviour {
 		GameObject shellObject = GameObject.Instantiate(shell, transform.position, Quaternion.identity);
 		shellObject.GetComponent<Rigidbody2D>().AddForce(-playerDir * projectForce,ForceMode2D.Impulse);
 		//dash self
-		GetComponent<Rigidbody2D>().AddForce(playerDir * dashForce, ForceMode2D.Impulse);
-		Debug.Log(transform.eulerAngles.z);
+		//GetComponent<Rigidbody2D>().AddForce(playerDir * dashForce, ForceMode2D.Impulse);
+
+		//shoot particle
+		particle.Play();
 	} 
 
 }
