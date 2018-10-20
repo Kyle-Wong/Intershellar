@@ -20,11 +20,11 @@ public class ShellPickUp : MonoBehaviour {
     //Detects if the player collides with the shell
     void OnTriggerEnter2D(Collider2D other)
     {
+        //adds shells to crab
         if (other.tag == "Player")
         {
             Destroy(gameObject);
             shellAdder.Gain_Shell(worth);
         }
-        Debug.Log("Hit");
     }
 }
