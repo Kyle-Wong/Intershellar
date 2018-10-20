@@ -10,6 +10,7 @@ public class Star : MonoBehaviour {
     float screenHeight;
     public float parallaxScale;
 	void Start () {
+
 	}
 	
 	// Update is called once per frame
@@ -23,7 +24,7 @@ public class Star : MonoBehaviour {
         if (transform.localPosition.y < -screenHeight/2)
             transform.position += Vector3.up * screenHeight;
 
-        //transform.position += -1 * playerMovement.transform.forward * playerMovement.getVelocity() * parallaxScale;
+        //transform.position += -1 * playerMovement.getVelocity() * parallaxScale;
 
 
 	}

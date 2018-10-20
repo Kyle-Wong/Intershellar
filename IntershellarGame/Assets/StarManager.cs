@@ -14,6 +14,7 @@ public class StarManager : MonoBehaviour {
     public int smallStarCount;
     private float screenWidth;
     private float screenHeight;
+    private GameObject player;
 	void Start () {
         screenWidth = mainCamera.ViewportToWorldPoint(new Vector2(1, 0)).x - mainCamera.ScreenToWorldPoint(new Vector2(0, 0)).x;
         screenHeight = mainCamera.ViewportToWorldPoint(new Vector2(0, 1)).y - mainCamera.ScreenToWorldPoint(new Vector2(0, 0)).y;
@@ -21,6 +22,7 @@ public class StarManager : MonoBehaviour {
         generateStars(bigStarPrefab, bigStarCount);
         generateStars(midStarPrefab, midStarCount);
         generateStars(smallStarPrefab, smallStarCount);
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class StarManager : MonoBehaviour {
             rngTrans = transform.position + Vector3.right * (Random.Range(-screenWidth/2,screenWidth/2)) + Vector3.up * (Random.Range(-screenHeight/2,screenHeight/2));
             Transform newStar = Instantiate(starPrefab, rngTrans,Quaternion.identity);
             newStar.parent = transform;
+            newStar.GetComponent<Star>().playerMovement = player.GetComponent<Player_Movement>();
             newStar.GetComponent<Star>().setBounds(screenWidth,screenHeight);
         }
     }
