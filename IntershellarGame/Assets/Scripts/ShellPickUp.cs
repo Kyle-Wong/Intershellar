@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ShellPickUp : MonoBehaviour {
     //Change MoveTest to name of script with GainShell() method
-    public Player_Movement shellAdder;
+    private Player_Movement shellAdder;
     public int worth;
 
 	// Use this for initialization
 	void Start () {
-		
+        shellAdder = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
 	}
 	
 	// Update is called once per frame
