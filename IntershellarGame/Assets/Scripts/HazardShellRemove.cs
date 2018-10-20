@@ -23,7 +23,10 @@ public class HazardShellRemove : MonoBehaviour {
         for (int i = 0; i < shellLossWorth; i++)
         {
             shellRemover.removeShell();
-        }
-        removeShell.Lose_Shell();
+            if (removeShell.Get_ShellCount() > 0)
+            {
+                removeShell.Lose_Shell();
+            }
+        }       
     }
 }

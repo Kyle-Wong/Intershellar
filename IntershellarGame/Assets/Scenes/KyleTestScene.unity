@@ -338,6 +338,7 @@ MonoBehaviour:
   drag: 0.99
   playerLeapVelocity: 3
   shellShotSpeed: 5
+  shellCount: 0
 --- !u!1 &2100906216
 GameObject:
   m_ObjectHideFlags: 0
