@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour {
 
-    Vector3 velocity = 0;
+    Vector3 velocity;
     float crab_speed = 1f;
     float rotation_speed = 10f;
 
 	// Use this for initialization
 	void Start () {
-		
+        velocity.Set(0f, 0f, 0f);
 	}
 	
 	// Update is called once per frame
@@ -33,6 +33,6 @@ public class Player_Movement : MonoBehaviour {
 
     public float getVelocity()
     {
-        return velocity;
+        ;
     }
 }
