@@ -6,10 +6,11 @@ public class Player_Movement : MonoBehaviour {
 
     public Transform shellProjectilePrefab;
     private ShellStack stacker;
-    private Death time;
     private Vector3 velocity;
     float crab_speed = 1f;
     float rotation_speed = 10f;
+    public float timer;
+    private float timing;
     public float drag;
     public float playerLeapVelocity;
     public float shellShotSpeed;
@@ -18,8 +19,8 @@ public class Player_Movement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         velocity = new Vector3(0, 0, 0);
+        timing = timer;
         stacker = GetComponent<ShellStack>();
-        time = GetComponent<Death>();
         Gain_Shell(shellCount);
 	}
 	
@@ -44,25 +45,39 @@ public class Player_Movement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.W) && shellCount > 0)
             ShootShell();
+        NoShells();
     }
     //Activates when crab collides with detached shell. Places shell on top of stack.
     public void Gain_Shell(int worth)
     {
+        timer = 10f;
         for (int i = 0; i < worth; i++)
         {
             stacker.addShell();
-            Debug.Log("during" + shellCount);
         }
         if (began){
             shellCount += worth;
         }
-        time.timer = 10f;
         began = true;
     }
     public void Lose_Shell()
     {
         shellCount--;
     }
+
+    public void NoShells()
+    {
+        Debug.Log(timer);
+        if (shellCount == 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        if (timer <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public Vector3 getVelocity()
     {
         return velocity;
