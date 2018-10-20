@@ -24,6 +24,8 @@ public class Player_Movement : MonoBehaviour {
     private ShellList shellList;
     private int mySpriteId = -1;
     SpriteRenderer spriteRenderer;
+    public Transform projectileParticles;
+    public Transform hurtParticles;
 	// Use this for initialization
 	void Start () {
         shellCount = 0;
@@ -125,21 +127,25 @@ public class Player_Movement : MonoBehaviour {
         Vector3 playerDir = transform.up*-1;
         //project shell
         int shellType = -1;
-        if(shellCount > 1)
-            shellType = stacker.getTopShellId();
-        else if(shellCount == 1)
+        Vector3 shellPosition = transform.position;
+        if (shellCount > 1)
         {
-            if(mySpriteId != -1)
+            shellType = stacker.getTopShellId();
+            shellPosition = stacker.getTopShell().position;
+        }
+        else if (shellCount == 1)
+        {
+            if (mySpriteId != -1)
             {
                 shellType = mySpriteId;
             }
         }
+        Transform particles = Instantiate(projectileParticles, shellPosition, Quaternion.LookRotation(transform.forward, playerDir));
         Transform shellObject = Instantiate(shellProjectilePrefab, transform.position, Quaternion.LookRotation(transform.forward,playerDir));
         shellObject.GetComponent<Projectile>().setVelocity(-1 * playerDir * shellShotSpeed);
         velocity = playerDir * playerLeapVelocity;
         shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
         Lose_Shell();
         //dash self
-        dashParticle.Play();
     }
 }

@@ -67,4 +67,9 @@ public class ShellStack : MonoBehaviour {
     {
         return shellId[shellId.Count-1];
     }
+    
+    public Transform getTopShell()
+    {
+        return children[children.Count-1];
+    }
 }
