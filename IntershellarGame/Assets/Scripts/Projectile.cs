@@ -16,6 +16,10 @@ public class Projectile : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D other)
 	{
-		Debug.Log("hmm");
+		//kill enemies
+		if(other.CompareTag("Enemy"))
+			Destroy(other.gameObject);
+		if(!other.CompareTag("Player") && !other.CompareTag("Projectile"))
+			Destroy(gameObject);
 	}
 }
