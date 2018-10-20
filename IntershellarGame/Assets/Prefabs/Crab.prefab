@@ -193,8 +193,9 @@ MonoBehaviour:
   shellShotSpeed: 5
   shellCount: 5
   startingShells: 3
-  dashParticle: {fileID: 0}
   nakedSprite: {fileID: 21300000, guid: 8dd6b7ed44ae98a449b0b671a1225d01, type: 3}
+  projectileParticles: {fileID: 0}
+  hurtParticles: {fileID: 0}
 --- !u!212 &212301323112787986
 SpriteRenderer:
   m_ObjectHideFlags: 1
