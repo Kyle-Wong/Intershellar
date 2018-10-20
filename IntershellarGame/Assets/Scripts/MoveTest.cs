@@ -24,7 +24,14 @@ public class MoveTest : MonoBehaviour {
             withShell.gameObject.SetActive(false);
             noShell.gameObject.SetActive(true);
         }
-        transform.Translate(.1f, 0, 0);
+        if (Input.GetButton("Horizontal"))
+        {
+            transform.Translate(Input.GetAxis("Horizontal") / 3, 0, 0);
+        }
+        if (Input.GetButton("Vertical"))
+        {
+            transform.Translate(0, Input.GetAxis("Vertical"), 0);
+        }
 	}
 
     public void AddShell(int worth)
