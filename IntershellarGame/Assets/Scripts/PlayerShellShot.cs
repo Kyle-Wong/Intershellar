@@ -15,14 +15,24 @@ public class PlayerShellShot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetButtonDown("Vertical"))
+			ShootShell();
 	}
 	
 	//shoot a shell at opposite direction and dash
 	private void ShootShell()
 	{
+		//if has shell...
+
+		//calculate the direction of the player
+		Vector2 playerDir = new Vector2(Mathf.Cos(Mathf.Deg2Rad * (transform.eulerAngles.z + initialRotation)),
+										Mathf.Sin(Mathf.Deg2Rad * (transform.eulerAngles.z + initialRotation)));
 		//project shell
 		GameObject shellObject = GameObject.Instantiate(shell, transform.position, Quaternion.identity);
+		shellObject.GetComponent<Rigidbody2D>().AddForce(-playerDir * projectForce,ForceMode2D.Impulse);
+		//dash self
+		GetComponent<Rigidbody2D>().AddForce(playerDir * dashForce, ForceMode2D.Impulse);
+		Debug.Log(transform.eulerAngles.z);
 	} 
 
 }
