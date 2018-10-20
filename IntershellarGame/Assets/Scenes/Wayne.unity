@@ -4862,7 +4862,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 412996507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 0.09, z: 0}
+  m_LocalPosition: {x: 0.37, y: -1.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 785891737}
@@ -4930,7 +4930,7 @@ MonoBehaviour:
   initialRotation: 0
   projectForce: 1
   dashForce: 10
-  particle: {fileID: 385755887}
+  particle: {fileID: 785891736}
 --- !u!1 &785891734
 GameObject:
   m_ObjectHideFlags: 0
@@ -9617,11 +9617,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4384999806233334, guid: 9e8d01d4802c8444cad553a6472518c5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.04
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 4384999806233334, guid: 9e8d01d4802c8444cad553a6472518c5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 4384999806233334, guid: 9e8d01d4802c8444cad553a6472518c5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9658,7 +9658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1045091980678338, guid: 9e8d01d4802c8444cad553a6472518c5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e8d01d4802c8444cad553a6472518c5, type: 2}
@@ -9807,6 +9807,7 @@ GameObject:
   - component: {fileID: 1800229487}
   - component: {fileID: 1800229486}
   - component: {fileID: 1800229485}
+  - component: {fileID: 1800229488}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9874,3 +9875,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1800229488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1800229484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509a311f3aa2ab2458760f065675b52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 412996507}
+  leftLower: {x: -10, y: -10}
+  rightUpper: {x: 10, y: 10}
