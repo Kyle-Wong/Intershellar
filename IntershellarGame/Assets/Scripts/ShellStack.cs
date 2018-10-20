@@ -12,7 +12,7 @@ public class ShellStack : MonoBehaviour {
     private float rotationDirection;
     private float shellTimer;
 
-	void Start () {
+	void Awake () {
         rotationDirection = 1;
         children = new List<Transform>();
         foreach (Transform child in transform)
