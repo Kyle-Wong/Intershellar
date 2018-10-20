@@ -24,6 +24,7 @@ public class Planet : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		//player.GetComponent<Rigidbody2D>().velocity *= 0.99f;
 		//attract player if in range
 		if(Vector2.Distance(transform.position, player.transform.position) <= rangeRadius)
 			Attract();
