@@ -13,4 +13,9 @@ public class Projectile : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public void OnTriggerEnter2D(Collider2D other)
+	{
+		Debug.Log("hmm");
+	}
 }
