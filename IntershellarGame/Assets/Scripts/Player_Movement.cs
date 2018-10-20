@@ -13,6 +13,7 @@ public class Player_Movement : MonoBehaviour {
     public float playerLeapVelocity;
     public float shellShotSpeed;
     public int shellCount;
+    private bool began = false;
 	// Use this for initialization
 	void Start () {
         velocity = new Vector3(0, 0, 0);
@@ -41,10 +42,6 @@ public class Player_Movement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.W) && shellCount > 0)
             ShootShell();
-        /*if (Input.GetButtonDown("Push"))
-        {
-            transform.Translate
-        }*/
     }
     //Activates when crab collides with detached shell. Places shell on top of stack.
     public void Gain_Shell(int worth)
@@ -52,8 +49,16 @@ public class Player_Movement : MonoBehaviour {
         for (int i = 0; i < worth; i++)
         {
             stacker.addShell();
+            Debug.Log("during" + shellCount);
         }
-        shellCount += worth;
+        if (began){
+            shellCount += worth;
+        }
+        began = true;
+    }
+    public void Lose_Shell()
+    {
+        shellCount--;
     }
     public Vector3 getVelocity()
     {
