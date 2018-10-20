@@ -5,11 +5,11 @@ using UnityEngine;
 public class HazardShellRemove : MonoBehaviour {
     public int shellLossWorth;
     private ShellStack shellRemover;
-    private GameObject removeShell;
+    private Player_Movement removeShell;
 
 	// Use this for initialization
 	void Start () {
-        removeShell = GameObject.FindGameObjectWithTag("Player");
+        removeShell = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
         shellRemover = GameObject.FindGameObjectWithTag("Player").GetComponent<ShellStack>();
 	}
 	

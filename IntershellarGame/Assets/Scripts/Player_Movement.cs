@@ -6,6 +6,7 @@ public class Player_Movement : MonoBehaviour {
 
     public Transform shellProjectilePrefab;
     private ShellStack stacker;
+    private Death time;
     private Vector3 velocity;
     float crab_speed = 1f;
     float rotation_speed = 10f;
@@ -18,6 +19,7 @@ public class Player_Movement : MonoBehaviour {
 	void Start () {
         velocity = new Vector3(0, 0, 0);
         stacker = GetComponent<ShellStack>();
+        time = GetComponent<Death>();
         Gain_Shell(shellCount);
 	}
 	
@@ -54,6 +56,7 @@ public class Player_Movement : MonoBehaviour {
         if (began){
             shellCount += worth;
         }
+        time.timer = 10f;
         began = true;
     }
     public void Lose_Shell()
