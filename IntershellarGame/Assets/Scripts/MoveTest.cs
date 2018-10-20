@@ -14,8 +14,8 @@ public class MoveTest : MonoBehaviour {
         transform.Translate(.5f, 0, 0);
 	}
 
-    public void AddShell()
+    public void AddShell(int worth)
     {
-        shell = shell + 1;
+        shell = shell + worth;
     }
 }

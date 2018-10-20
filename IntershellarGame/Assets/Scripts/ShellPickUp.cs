@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShellPickUp : MonoBehaviour {
     //Change MoveTest to name of script with GainShell() method
     public MoveTest shellAdder;
+    public int worth;
 
 	// Use this for initialization
 	void Start () {
@@ -24,10 +25,10 @@ public class ShellPickUp : MonoBehaviour {
             Destroy(gameObject);
 
             //Delete this
-            shellAdder.AddShell();
+            shellAdder.AddShell(worth);
 
             //Actual method to gain shell below
-            //shellAdder.GainShell();
+            //shellAdder.GainShell(worth);
         }
         Debug.Log("Hit");
     }
