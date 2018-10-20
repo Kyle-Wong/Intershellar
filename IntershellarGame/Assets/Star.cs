@@ -5,6 +5,7 @@ using UnityEngine;
 public class Star : MonoBehaviour {
 
     // Use this for initialization
+    public Transform mainCam;
     public Player_Movement playerMovement;
     float screenWidth;
     float screenHeight;
@@ -15,16 +16,15 @@ public class Star : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.localPosition.x > screenWidth/2)
+        if (transform.position.x > mainCam.position.x+screenWidth/2)
             transform.position += Vector3.left * screenWidth;
-        if (transform.localPosition.x < -screenWidth/2)
+        if (transform.position.x < mainCam.position.x - screenWidth/2)
             transform.position += Vector3.right * screenWidth;
-        if (transform.localPosition.y > screenHeight/2)
+        if (transform.position.y > mainCam.position.y+screenHeight / 2)
             transform.position += Vector3.down * screenHeight;
-        if (transform.localPosition.y < -screenHeight/2)
+        if (transform.position.y < mainCam.position.y- screenHeight/2)
             transform.position += Vector3.up * screenHeight;
-
-        //transform.position += -1 * playerMovement.getVelocity() * parallaxScale;
+        transform.position += -1 * playerMovement.getVelocity() * parallaxScale;
 
 
 	}
