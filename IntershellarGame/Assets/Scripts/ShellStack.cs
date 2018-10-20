@@ -11,6 +11,7 @@ public class ShellStack : MonoBehaviour {
     public float rngAngle;
     private float rotationDirection;
     private float shellTimer;
+
 	void Start () {
         rotationDirection = 1;
         children = new List<Transform>();
@@ -50,5 +51,9 @@ public class ShellStack : MonoBehaviour {
     {
         shell.localRotation = Quaternion.Euler(0, 0,(Random.value * rngAngle*rotationDirection));
         rotationDirection *= -1;
+    }
+    public int shellCount()
+    {
+        return children.Count;
     }
 }
