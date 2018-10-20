@@ -64,7 +64,10 @@ public class Player_Movement : MonoBehaviour {
     {
         shellCount--;
     }
-
+    public int Get_ShellCount()
+    {
+        return shellCount;
+    }
     public void NoShells()
     {
         Debug.Log(timer);
