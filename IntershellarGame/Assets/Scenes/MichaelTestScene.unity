@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8aa8f72861a274681269d3813b78e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shell: 0
+  shell: 3
 --- !u!4 &88737545
 Transform:
   m_ObjectHideFlags: 0
@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 231808410}
   - component: {fileID: 231808408}
   - component: {fileID: 231808409}
-  - component: {fileID: 231808413}
   m_Layer: 0
   m_Name: TestHazard
   m_TagString: Untagged
@@ -264,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4ed2a533b9544faab3ce301c8cda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shellLossWorth: -5
+  shellLossWorth: 5
   removeShell: {fileID: 88737544}
 --- !u!212 &231808411
 SpriteRenderer:
@@ -325,26 +324,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &231808413
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 231808407}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &435253787
 GameObject:
   m_ObjectHideFlags: 0

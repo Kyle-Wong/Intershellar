@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class HazardShellRemove : MonoBehaviour {
     public int shellLossWorth;
-
-    //Change MoveTest to the name of the script with the remove shell method
-    public MoveTest removeShell;
+    private ShellStack shellRemover;
+    private GameObject removeShell;
 
 	// Use this for initialization
 	void Start () {
-		
+        removeShell = GameObject.FindGameObjectWithTag("Player");
+        shellRemover = GameObject.FindGameObjectWithTag("Player").GetComponent<ShellStack>();
 	}
 	
 	// Update is called once per frame
@@ -20,10 +20,10 @@ public class HazardShellRemove : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        for (int i = 0; i < shellLossWorth; i++)
         {
-            //Replace AddShell with remove shell method and make shellLossWorth positive
-            removeShell.AddShell(-shellLossWorth);
+            shellRemover.removeShell();
         }
+
     }
 }
