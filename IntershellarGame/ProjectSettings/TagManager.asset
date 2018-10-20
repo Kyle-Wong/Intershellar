@@ -8,6 +8,7 @@ TagManager:
   - PickUp
   - Projectile
   - Planet
+  - ShellData
   layers:
   - Default
   - TransparentFX

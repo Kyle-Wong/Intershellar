@@ -14,16 +14,25 @@ public class Player_Movement : MonoBehaviour {
     public float drag;
     public float playerLeapVelocity;
     public float shellShotSpeed;
+    [HideInInspector]
     public int shellCount;
+    public int startingShells;
     private bool began = false;
 
     public ParticleSystem dashParticle;
+    public Sprite nakedSprite;
+    private ShellList shellList;
+    private int mySpriteId = -1;
+    SpriteRenderer spriteRenderer;
 	// Use this for initialization
 	void Start () {
+        shellCount = 0;
+        shellList = GameObject.FindGameObjectWithTag("ShellData").GetComponent<ShellList>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         velocity = new Vector3(0, 0, 0);
         timing = timer;
         stacker = GetComponent<ShellStack>();
-        Gain_Shell(shellCount);
+        Gain_Shell(startingShells,-1);
 	}
 	
 	// Update is called once per frame
@@ -50,12 +59,21 @@ public class Player_Movement : MonoBehaviour {
         NoShells();
     }
     //Activates when crab collides with detached shell. Places shell on top of stack.
-    public void Gain_Shell(int worth)
+    public void Gain_Shell(int worth,int shellType)
     {
         timer = timing;
         for (int i = 0; i < worth; i++)
         {
-            stacker.addShell();
+            int addType = (shellType == -1) ? (int)Random.Range(0, shellList.shellSprite.Length) : shellType;
+            if(shellCount == 0)
+            {
+                spriteRenderer.sprite = shellList.playerShellSprite[addType];
+                mySpriteId = addType;
+            } else
+            {
+                stacker.addShell(addType);
+            }
+            shellCount++;
         }
         if (began){
             shellCount += worth;
@@ -64,7 +82,15 @@ public class Player_Movement : MonoBehaviour {
     }
     public void Lose_Shell()
     {
-        shellCount--;
+        if (shellCount > 1)
+        {
+            shellCount--;
+            stacker.removeShell();
+        } else if(shellCount == 1)
+        {
+            shellCount--;
+            spriteRenderer.sprite = nakedSprite;
+        } 
     }
     public int Get_ShellCount()
     {
@@ -96,13 +122,23 @@ public class Player_Movement : MonoBehaviour {
         //if has shell...
 
         //calculate the direction of the player
-        shellCount--;
         Vector3 playerDir = transform.up*-1;
         //project shell
+        int shellType = -1;
+        if(shellCount > 1)
+            shellType = stacker.getTopShellId();
+        else if(shellCount == 1)
+        {
+            if(mySpriteId != -1)
+            {
+                shellType = mySpriteId;
+            }
+        }
         Transform shellObject = Instantiate(shellProjectilePrefab, transform.position, Quaternion.LookRotation(transform.forward,playerDir));
         shellObject.GetComponent<Projectile>().setVelocity(-1 * playerDir * shellShotSpeed);
         velocity = playerDir * playerLeapVelocity;
-        stacker.removeShell();
+        shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
+        Lose_Shell();
         //dash self
         dashParticle.Play();
     }
