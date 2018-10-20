@@ -44,14 +44,22 @@ public class Planet : MonoBehaviour {
 		{
 			attractVector = attractDirection * maxSpeed;
 		}
-		//circle around 
+		//circle around
 		if(Vector2.Distance(transform.position, player.transform.position) <= circleAroundRadius)
 		{
 			attractVector = new Vector2(0,0);
 		}
+		//give perpendicular force towards the direction player moves
+		Vector2 perpendicularVector = new Vector2(attractDirection.y, - attractDirection.x) * perpendicularForce;
+		float perpendicularAngle = Mathf.Atan2(perpendicularVector.y, perpendicularVector.x) * Mathf.Rad2Deg;
+		float playerAngle = Mathf.Atan2(player.GetComponent<Rigidbody2D>().velocity.y, player.GetComponent<Rigidbody2D>().velocity.x) * Mathf.Rad2Deg;
+		Debug.Log(player.GetComponent<Rigidbody2D>().velocity);
+		if(Mathf.Abs(perpendicularAngle - playerAngle) < 80)
+		{
+			perpendicularVector = new Vector2(-attractDirection.y, attractDirection.x) * perpendicularForce;
+		}
 		//finally, attract
 		player.transform.GetComponent<Rigidbody2D>().AddForce(attractVector * Time.deltaTime * 60,ForceMode2D.Force);
-		Vector2 perpendicularVector = new Vector2(attractDirection.y, - attractDirection.x) * perpendicularForce;
 		player.transform.GetComponent<Rigidbody2D>().AddForce(perpendicularVector * Time.deltaTime * 60 ,ForceMode2D.Force);
 		
 
