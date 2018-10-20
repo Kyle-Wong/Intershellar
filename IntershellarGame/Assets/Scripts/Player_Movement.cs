@@ -76,10 +76,7 @@ public class Player_Movement : MonoBehaviour {
             }
             shellCount++;
         }
-        if (began){
-            shellCount += worth;
-        }
-        began = true;
+        
     }
     public void Lose_Shell()
     {
