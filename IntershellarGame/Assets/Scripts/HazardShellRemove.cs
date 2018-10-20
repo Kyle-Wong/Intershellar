@@ -5,36 +5,54 @@ using UnityEngine;
 public class HazardShellRemove : MonoBehaviour {
     public int shellLossWorth;
     private ShellStack shellRemover;
-    private Player_Movement removeShell;
+    private Player_Movement movement;
     private GameObject player;
-    public float forceMagnitude;
+    public float forceConstant;
+    public float timer;
+    private float timing;
 
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
-        removeShell = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
+        movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
         shellRemover = GameObject.FindGameObjectWithTag("Player").GetComponent<ShellStack>();
+        timing = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        clock();
 		
 	}
 
+    void clock()
+    {
+        if (timing > 0)
+        {
+            timing -= Time.deltaTime;
+        }
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //Removes a shell from the crab
-        for (int i = 0; i < shellLossWorth; i++)
+        if (timing <= 0)
         {
-            if (removeShell.Get_ShellCount() > 0)
+            //Removes a shell from the crab
+            for (int i = 0; i < shellLossWorth; i++)
             {
-                shellRemover.removeShell();
-                removeShell.Lose_Shell();
+                if (movement.Get_ShellCount() > 0)
+                {
+                    shellRemover.removeShell();
+                    movement.Lose_Shell();
+                }
             }
+            timing = timer;
         }
+
         //repulses the player from the hazard
-        Vector2 repulsionDirection = -player.transform.position;
-        Vector2 repulsionForce = repulsionDirection * forceMagnitude;
+        Vector2 repulsionDirection = -(transform.position - movement.getVelocity());
+        Vector2 repulsionForce = repulsionDirection * forceConstant;
         player.transform.GetComponent<Rigidbody2D>().AddForce(repulsionForce);
     }
 }

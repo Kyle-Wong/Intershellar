@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 231808411}
   - component: {fileID: 231808410}
   - component: {fileID: 231808408}
-  - component: {fileID: 231808409}
   m_Layer: 0
   m_Name: TestHazard
   m_TagString: Untagged
@@ -147,21 +146,6 @@ CircleCollider2D:
   m_Offset: {x: 0.6, y: 0.5}
   serializedVersion: 2
   m_Radius: 3
---- !u!58 &231808409
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 231808407}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.6, y: 0.5}
-  serializedVersion: 2
-  m_Radius: 3
 --- !u!114 &231808410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,8 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4ed2a533b9544faab3ce301c8cda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shellLossWorth: 5
-  forceMagnitude: 50
+  shellLossWorth: 1
+  forceConstant: 50
+  timer: 0.5
 --- !u!212 &231808411
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -278,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5273deb4f0cd9d94582e2e694a829b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worth: 3
+  worth: 5
 --- !u!212 &435253790
 SpriteRenderer:
   m_ObjectHideFlags: 0
