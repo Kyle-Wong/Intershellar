@@ -43,7 +43,7 @@ public class Player_Movement : MonoBehaviour {
         }*/
     }
     //Activates when crab collides with detached shell. Places shell on top of stack.
-    void Gain_Shell()
+    public void Gain_Shell(int worth)
     {
 
     }
