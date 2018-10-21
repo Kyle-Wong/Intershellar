@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
     private Player_Movement player;
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
+        player.transform.Find("Crab_sprite").GetComponent<Animator>().enabled = false;
         gameWon = false;
         paused = false;
 	}
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour {
     private IEnumerator PlayerDie()
     {
         AudioSource.PlayClipAtPoint(dieSE, GameObject.FindWithTag("MainCamera").transform.position);
+        player.transform.Find("Crab_sprite").GetComponent<Animator>().enabled = true;
         player.transform.Find("Crab_sprite").GetComponent<Animator>().SetTrigger("Die");
         yield return new WaitForSeconds(1);
         Time.timeScale = 0;
