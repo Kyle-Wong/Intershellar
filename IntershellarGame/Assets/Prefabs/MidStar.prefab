@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
   playerMovement: {fileID: 0}
-  parallaxScale: 0.005
+  parallaxScale: 0.25
 --- !u!212 &212827235040712194
 SpriteRenderer:
   m_ObjectHideFlags: 1
