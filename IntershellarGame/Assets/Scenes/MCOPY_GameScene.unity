@@ -1094,6 +1094,8 @@ MonoBehaviour:
   hasRange: 0
   leftLower: {x: 0, y: 0}
   rightUpper: {x: 0, y: 0}
+  minSize: 11
+  maxSize: 20
 --- !u!1001 &923566042
 Prefab:
   m_ObjectHideFlags: 0

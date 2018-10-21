@@ -58,7 +58,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -93,6 +93,7 @@ MonoBehaviour:
   speed: 2
   hurtParticle: {fileID: 1857854172333030, guid: c09780713fff2764abeb2c436da9afbe,
     type: 2}
+  hitSE: {fileID: 8300000, guid: 8ba373b7b27154a4990d16a35e4088c1, type: 3}
 --- !u!114 &114241893664803604
 MonoBehaviour:
   m_ObjectHideFlags: 1
