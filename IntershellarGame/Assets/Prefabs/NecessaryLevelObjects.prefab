@@ -118,6 +118,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 760796a1c35eb4a40b430d9016f8706c, type: 3}
   - {fileID: 21300000, guid: 2060e4d401ca2d947a1d4a32a9e50c7f, type: 3}
   - {fileID: 21300000, guid: b3ab520f26f9b654e92cbd7699225fb2, type: 3}
+  - {fileID: 21300000, guid: 08122816b9480554b824a63d44c88bb0, type: 3}
+  - {fileID: 21300000, guid: 50fcf4bbf18ec414d95018b965626b28, type: 3}
   playerShellSprite:
   - {fileID: 21300000, guid: 6fee5d7c761163043aebed88f6adc22b, type: 3}
   - {fileID: 21300000, guid: 6906acf25b8118747b4925619d845231, type: 3}
@@ -126,6 +128,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bc67dc8846c4f94469991307c7880e1b, type: 3}
   - {fileID: 21300000, guid: 19b3aac136cbdd740bb220279bc46d22, type: 3}
   - {fileID: 21300000, guid: 312d8b909b301924bb5d8bb07e721d44, type: 3}
+  - {fileID: 21300000, guid: 8f60cf4124206bc4db3b3f49693d8d40, type: 3}
+  - {fileID: 21300000, guid: a544e81b3362ff045a4360b5baac65a7, type: 3}
   tripleShellSprite:
   - {fileID: 0}
   - {fileID: 0}
