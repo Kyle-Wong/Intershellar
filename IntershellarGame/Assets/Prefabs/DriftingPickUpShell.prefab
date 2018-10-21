@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342dfd8a3cfb3284999bac6ec6818a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate_speed: 10
+  rotate_speed: 50
 --- !u!114 &114297654612039728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,9 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5273deb4f0cd9d94582e2e694a829b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomizeSprite: 1
-  worth: 2
+  randomizeSprite: 0
+  worth: 1
   shellType: -1
+  pickupDelay: 0.5
 --- !u!212 &212128325661797548
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -159,7 +160,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8189fb7be0d0a1643841b17b9206b6fb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

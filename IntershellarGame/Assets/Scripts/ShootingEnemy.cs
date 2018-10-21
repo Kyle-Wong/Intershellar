@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShootingEnemy : MonoBehaviour {
 	private GameObject player;
 	public int initialRotation;
+	public AudioClip hurtSE;
 	[Header("Bullet")]
 	public float range;
 	public AudioClip shootSE;
@@ -59,6 +60,13 @@ public class ShootingEnemy : MonoBehaviour {
 		//GetComponent<AudioSource>().PlayOneShot(shootSE);
 		GameObject bulletObject = GameObject.Instantiate(bullet, transform.Find("mouse").position, Quaternion.identity);
 		bulletObject.GetComponent<EnemyBullet>().SetVelocity(transform.rotation.eulerAngles.z);
+	}
+
+	public void Hurt()
+	{
+		AudioSource.PlayClipAtPoint(hurtSE, GameObject.FindWithTag("MainCamera").transform.position);
+		GetComponent<Animator>().SetTrigger("Die");
+		//Destroy(gameObject, 2);
 	}
 
 }

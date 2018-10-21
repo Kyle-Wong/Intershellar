@@ -146,7 +146,8 @@ public class Player_Movement : MonoBehaviour {
         Transform shellObject = Instantiate(spawnShell, shellPosition, transform.rotation);
         shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
         shellObject.GetComponent<ShellPickUp>().shellType = shellType;
-        shellObject.GetComponent<ConstantMove>().velocity = transform.right*-1*shellLossVelocity;
+        float randomAngle = Random.Range(0, Mathf.PI * 2);
+        shellObject.GetComponent<ConstantMove>().velocity = new Vector2(Mathf.Cos(randomAngle),Mathf.Sin(randomAngle))*shellLossVelocity;
     }
     public int Get_ShellCount()
     {
