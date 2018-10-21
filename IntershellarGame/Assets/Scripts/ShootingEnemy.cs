@@ -6,6 +6,7 @@ public class ShootingEnemy : MonoBehaviour {
 	private GameObject player;
 	public int initialRotation;
 	[Header("Bullet")]
+	public AudioClip shootSE;
 	public GameObject bullet;
 	private float timer;
 	public float shootInterval;
@@ -25,7 +26,6 @@ public class ShootingEnemy : MonoBehaviour {
 	//rotate the enemy to face the player
 	private void FacePlayer()
 	{
-		 
 		//turn left or right?
 		//if()
 		Vector2 differ = player.transform.position - transform.position;
@@ -39,6 +39,8 @@ public class ShootingEnemy : MonoBehaviour {
 		{
 			if(timer > shootInterval)
 			{
+				AudioSource.PlayClipAtPoint(shootSE, GameObject.FindWithTag("MainCamera").transform.position);
+				//GetComponent<AudioSource>().PlayOneShot(shootSE);
 				timer = 0;
 				GameObject bulletObject = GameObject.Instantiate(bullet, transform.Find("mouse").position, Quaternion.identity);
 				bulletObject.GetComponent<EnemyBullet>().SetVelocity(transform.rotation.eulerAngles.z);
