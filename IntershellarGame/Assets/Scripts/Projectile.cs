@@ -6,12 +6,19 @@ public class Projectile : MonoBehaviour {
 
     // Use this for initialization
     private Vector3 velocity;
+    public float lifeTime = 4;
+    private float lifeTimer = 0;
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if(lifeTimer > lifeTime)
+        {
+            Destroy(gameObject);
+        }
+        lifeTimer += Time.deltaTime;
         transform.position += velocity * Time.deltaTime;
 	}
 
