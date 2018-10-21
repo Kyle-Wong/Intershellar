@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 114318234730793918}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,7 +404,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432052617963914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3869178, y: -1.9427444, z: 10.453839}
+  m_LocalPosition: {x: 74, y: -1.9427444, z: 10.453839}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4087632164581276}
@@ -412,8 +412,8 @@ Transform:
   - {fileID: 224014151685159950}
   - {fileID: 4353772707189974}
   - {fileID: 224126547841376812}
-  - {fileID: 224363436931524208}
   - {fileID: 224673888459239418}
+  - {fileID: 224363436931524208}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1439,7 +1439,7 @@ RectTransform:
   - {fileID: 224038966595867064}
   - {fileID: 224593202162329610}
   m_Father: {fileID: 4237017773300510}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1517,7 +1517,7 @@ RectTransform:
   - {fileID: 224035453997307720}
   - {fileID: 224800764442361036}
   m_Father: {fileID: 4237017773300510}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

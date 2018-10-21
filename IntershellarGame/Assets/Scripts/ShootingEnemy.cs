@@ -13,8 +13,10 @@ public class ShootingEnemy : MonoBehaviour {
 	private float timer;
 	public float shootInterval;
 	// Use this for initialization
+	private bool died;
 	void Start () {
 		player = GameObject.FindWithTag("Player");
+		died = false;
 	}
 	
 	// Update is called once per frame
@@ -56,17 +58,21 @@ public class ShootingEnemy : MonoBehaviour {
 	{
 		GetComponent<Animator>().SetTrigger("Shoot");
 		yield return new WaitForSeconds(0.3f);
-		AudioSource.PlayClipAtPoint(shootSE, GameObject.FindWithTag("MainCamera").transform.position);
-		//GetComponent<AudioSource>().PlayOneShot(shootSE);
-		GameObject bulletObject = GameObject.Instantiate(bullet, transform.Find("mouse").position, Quaternion.identity);
-		bulletObject.GetComponent<EnemyBullet>().SetVelocity(transform.rotation.eulerAngles.z);
+		if(!died)
+		{
+			AudioSource.PlayClipAtPoint(shootSE, GameObject.FindWithTag("MainCamera").transform.position);
+			//GetComponent<AudioSource>().PlayOneShot(shootSE);
+			GameObject bulletObject = GameObject.Instantiate(bullet, transform.Find("mouse").position, Quaternion.identity);
+			bulletObject.GetComponent<EnemyBullet>().SetVelocity(transform.rotation.eulerAngles.z);
+		}
 	}
 
 	public void Hurt()
 	{
 		AudioSource.PlayClipAtPoint(hurtSE, GameObject.FindWithTag("MainCamera").transform.position);
 		GetComponent<Animator>().SetTrigger("Die");
-		//Destroy(gameObject, 2);
+		died = true;
+		Destroy(gameObject, 2);
 	}
 
 }
