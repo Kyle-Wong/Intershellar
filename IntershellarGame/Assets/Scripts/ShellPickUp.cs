@@ -7,7 +7,8 @@ public class ShellPickUp : MonoBehaviour {
     private Player_Movement shellAdder;
     public bool randomizeSprite = true;
     public int worth;
-    private int shellType = -1;
+    [HideInInspector]
+    public int shellType = -1;
 
 	// Use this for initialization
 	void Start () {

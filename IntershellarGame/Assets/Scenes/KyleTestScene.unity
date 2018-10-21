@@ -538,8 +538,52 @@ MonoBehaviour:
   nakedSprite: {fileID: 0}
   projectileParticles: {fileID: 0}
   hurtParticles: {fileID: 0}
+  spawnShell: {fileID: 0}
+  shellLossVelocity: 2
   pickupSound: {fileID: 0}
   dash: {fileID: 0}
+--- !u!1001 &1758208666
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.4933882
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.0956035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1895244603
 Prefab:
   m_ObjectHideFlags: 0

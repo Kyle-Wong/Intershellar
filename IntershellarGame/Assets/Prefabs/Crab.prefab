@@ -245,6 +245,8 @@ MonoBehaviour:
     type: 2}
   hurtParticles: {fileID: 4309292654765818, guid: c09780713fff2764abeb2c436da9afbe,
     type: 2}
+  spawnShell: {fileID: 4934194685161042, guid: 175c2f4193a6af54d9273d6ca4bdd7b8, type: 2}
+  shellLossVelocity: 2
   pickupSound: {fileID: 8300000, guid: b4167293300a31b4ea6ab4cc79a313d0, type: 3}
   dash: {fileID: 8300000, guid: 357ba6b34e02e7b4cb1a43d269a7c696, type: 3}
 --- !u!212 &212301323112787986
