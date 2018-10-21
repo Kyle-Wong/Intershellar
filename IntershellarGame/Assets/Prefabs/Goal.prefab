@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3531597ff73c78a45852defe4a3166ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularVelocity: 400
+  angularVelocity: 70
 --- !u!212 &212068893439104040
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1e7ae101030bc7649a762d638cb3b5ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37fd79983509fdb468634a6a9c647abf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
