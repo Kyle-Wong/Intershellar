@@ -26,6 +26,8 @@ public class Player_Movement : MonoBehaviour {
     SpriteRenderer spriteRenderer;
     public Transform projectileParticles;
     public Transform hurtParticles;
+    public Transform spawnShell;
+    public float shellLossVelocity = 2;
     private Rigidbody2D rb;
     private bool isDead;
     private bool allowInput = true;
@@ -124,6 +126,27 @@ public class Player_Movement : MonoBehaviour {
             shellCount--;
             spriteRenderer.sprite = nakedSprite;
         } 
+    }
+    public void spawnLooseShell()
+    {
+        int shellType = -1;
+        Vector3 shellPosition = transform.position;
+        if (shellCount > 1)
+        {
+            shellType = stacker.getTopShellId();
+            shellPosition = stacker.getTopShell().position;
+        }
+        else if (shellCount == 1)
+        {
+            if (mySpriteId != -1)
+            {
+                shellType = mySpriteId;
+            }
+        }
+        Transform shellObject = Instantiate(spawnShell, shellPosition, transform.rotation);
+        shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
+        shellObject.GetComponent<ShellPickUp>().shellType = shellType;
+        shellObject.GetComponent<ConstantMove>().velocity = transform.right*-1*shellLossVelocity;
     }
     public int Get_ShellCount()
     {
