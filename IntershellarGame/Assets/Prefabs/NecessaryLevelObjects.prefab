@@ -275,9 +275,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4507287810992736}
   - component: {fileID: 82666695769055178}
+  - component: {fileID: 114603905159753612}
   m_Layer: 0
   m_Name: Music Object
-  m_TagString: Untagged
+  m_TagString: UniqueMusicObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09eb3168077265c4eb9b46d11b28542d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 
+  nextScene: MainMenu
   dieSE: {fileID: 8300000, guid: f1a4dfe70548d344bae0bd4637e536c6, type: 3}
   gameWon: 0
   paused: 0
@@ -941,6 +942,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114603905159753612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538271953311912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d60eac7eac536418b9d2a5f5f03ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114632717982015190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1035,8 +1047,8 @@ MonoBehaviour:
   smallStarPrefab: {fileID: 4026041664390894, guid: adecaeec23284704e96a936e77d60933,
     type: 2}
   bigStarCount: 0
-  midStarCount: 20
-  smallStarCount: 30
+  midStarCount: 60
+  smallStarCount: 100
   requirePlayer: 1
 --- !u!114 &114841867765684762
 MonoBehaviour:
