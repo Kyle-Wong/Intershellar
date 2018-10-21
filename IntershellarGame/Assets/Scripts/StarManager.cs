@@ -20,8 +20,8 @@ public class StarManager : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         screenWidth = mainCamera.ViewportToWorldPoint(new Vector2(1, 0)).x - mainCamera.ScreenToWorldPoint(new Vector2(0, 0)).x;
         screenHeight = mainCamera.ViewportToWorldPoint(new Vector2(0, 1)).y - mainCamera.ScreenToWorldPoint(new Vector2(0, 0)).y;
-        screenHeight *= 1.1f;   //let stars go a bit out of the edge of the screen
-        screenWidth *= 1.1f;
+        screenHeight *= 3.1f;   //let stars go a bit out of the edge of the screen
+        screenWidth *= 3.1f;
         generateStars(bigStarPrefab, bigStarCount);
         generateStars(midStarPrefab, midStarCount);
         generateStars(smallStarPrefab, smallStarCount);

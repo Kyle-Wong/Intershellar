@@ -5,18 +5,32 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 	public GameObject target;
 	private float speed = 5;
+	private int shellCount;
+
 	[Header("follow in what range?")]
 	public bool hasRange;
 	public Vector2 leftLower;
 	public Vector2 rightUpper;
 	// Use this for initialization
 	void Start () {
-		
+		shellCount = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		Follow();
+		TestResize();
+		/* 
+		if(Input.GetKeyDown(KeyCode.Q))
+		{
+			GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount++;
+			GameObject.FindGameObjectWithTag("Player").GetComponent<ShellStack>().addShell(1);
+		}
+		if(Input.GetKeyDown(KeyCode.R))
+		{
+			GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount--;
+			GameObject.FindGameObjectWithTag("Player").GetComponent<ShellStack>().removeShell();
+		}*/
 	}
 
 	private void Follow()
@@ -39,6 +53,30 @@ public class CameraFollow : MonoBehaviour {
 				transform.position += new Vector3(0, distance.y, 0);
 			}	
 		}	
+	}
+
+	//see more things when crab gets more shell
+	private void TestResize()
+	{
+		int crabNum = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount;
+		if(crabNum >= 8 && crabNum != shellCount)
+		{
+			shellCount = crabNum;
+			//when larger than 28 shells, only increase to 28 * 0.5 + 1
+			if(shellCount > 28 && gameObject.GetComponent<Camera>().orthographicSize < 15)
+				StartCoroutine(SmoothResize(15 - gameObject.GetComponent<Camera>().orthographicSize));
+			else if(shellCount <= 28)
+				StartCoroutine(SmoothResize(1 + 0.5f * crabNum - gameObject.GetComponent<Camera>().orthographicSize));
+		}
+	}
+
+	private IEnumerator SmoothResize(float change)
+	{
+		for(int i = 0; i< 10; i++)
+		{
+			gameObject.GetComponent<Camera>().orthographicSize += (change/10);
+			yield return new WaitForSeconds(0.01f);
+		}
 	}
 
 }
