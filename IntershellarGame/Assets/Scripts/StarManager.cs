@@ -15,6 +15,7 @@ public class StarManager : MonoBehaviour {
     private float screenHeight;
     private Camera mainCamera;
     private GameObject player;
+    public bool requirePlayer = true;
 	void Start () {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -34,14 +35,28 @@ public class StarManager : MonoBehaviour {
     {
 
         Vector3 rngTrans = new Vector3();
-        for(int i = 0; i < numStars; i++)
+        if (requirePlayer)
         {
-            rngTrans = transform.position + Vector3.right * (Random.Range(-screenWidth/2,screenWidth/2)) + Vector3.up * (Random.Range(-screenHeight/2,screenHeight/2));
-            Transform newStar = Instantiate(starPrefab, rngTrans,Quaternion.identity);
-            newStar.parent = transform;
-            newStar.GetComponent<Star>().mainCam = mainCamera.transform;
-            newStar.GetComponent<Star>().playerMovement = player.GetComponent<Player_Movement>();
-            newStar.GetComponent<Star>().setBounds(screenWidth,screenHeight);
+            for (int i = 0; i < numStars; i++)
+            {
+                rngTrans = transform.position + Vector3.right * (Random.Range(-screenWidth / 2, screenWidth / 2)) + Vector3.up * (Random.Range(-screenHeight / 2, screenHeight / 2));
+                Transform newStar = Instantiate(starPrefab, rngTrans, Quaternion.identity);
+                newStar.parent = transform;
+                newStar.GetComponent<Star>().mainCam = mainCamera.transform;
+                newStar.GetComponent<Star>().playerMovement = player.GetComponent<Player_Movement>();
+                newStar.GetComponent<Star>().setBounds(screenWidth, screenHeight);
+            }
+        } else
+        {
+            for (int i = 0; i < numStars; i++)
+            {
+                rngTrans = transform.position + Vector3.right * (Random.Range(-screenWidth / 2, screenWidth / 2)) + Vector3.up * (Random.Range(-screenHeight / 2, screenHeight / 2));
+                Transform newStar = Instantiate(starPrefab, rngTrans, Quaternion.identity);
+                newStar.parent = transform;
+                newStar.GetComponent<Star>().mainCam = mainCamera.transform;
+                newStar.GetComponent<Star>().playerMovement = player.GetComponent<Player_Movement>();
+                newStar.GetComponent<Star>().setBounds(screenWidth, screenHeight);
+            }
         }
     }
 }

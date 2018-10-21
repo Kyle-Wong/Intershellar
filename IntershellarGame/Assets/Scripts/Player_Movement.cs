@@ -30,7 +30,7 @@ public class Player_Movement : MonoBehaviour {
     private bool isDead;
     private bool allowInput = true;
 	// Use this for initialization
-	void Start () {
+	public void Start () {
         shellCount = 0;
         rb = GetComponent<Rigidbody2D>();
         shellList = GameObject.FindGameObjectWithTag("ShellData").GetComponent<ShellList>();
@@ -43,7 +43,7 @@ public class Player_Movement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void Update () {
         /*
         float rotating = Input.GetAxis("Rotation") * rotation_speed;
         if (Input.GetButton("Rotation"))
