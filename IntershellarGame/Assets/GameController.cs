@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour {
     private Player_Movement player;
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
-        playerIsDead = false;
         gameWon = false;
         paused = false;
 	}
