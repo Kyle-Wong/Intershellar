@@ -27,6 +27,8 @@ public class Player_Movement : MonoBehaviour {
     public Transform projectileParticles;
     public Transform hurtParticles;
     private Rigidbody2D rb;
+    private bool isDead;
+    private bool allowInput = true;
 	// Use this for initialization
 	void Start () {
         shellCount = 0;
@@ -49,16 +51,25 @@ public class Player_Movement : MonoBehaviour {
             transform.Rotate(0, 0, rotating);
         }
         */
-        if (Input.GetKey(KeyCode.A))
+        if (isDead)
         {
-            transform.Rotate(0, 0, rotation_speed);
+            spriteRenderer.sprite = null;
+            allowInput = false;
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (allowInput)
         {
-            transform.Rotate(0, 0, -rotation_speed);
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Rotate(0, 0, rotation_speed);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Rotate(0, 0, -rotation_speed);
+            }
+            if (Input.GetKeyDown(KeyCode.W) && shellCount > 0)
+                ShootShell();
         }
-        if (Input.GetKeyDown(KeyCode.W) && shellCount > 0)
-            ShootShell();
         NoShells();
     }
     //Activates when crab collides with detached shell. Places shell on top of stack.
@@ -104,7 +115,7 @@ public class Player_Movement : MonoBehaviour {
         }
         if (timer <= 0)
         {
-            Destroy(gameObject);
+            isDead = true;
         }
     }
 
@@ -144,5 +155,9 @@ public class Player_Movement : MonoBehaviour {
         shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
         Lose_Shell();
         //dash self
+    }
+    public bool dead()
+    {
+        return isDead;
     }
 }
