@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 public class GameController : MonoBehaviour {
 
     // Use this for initialization
@@ -14,9 +15,12 @@ public class GameController : MonoBehaviour {
     public Canvas deadCanvas;
     public Canvas pauseCanvas;
     private Player_Movement player;
+    private EventSystem eventSystem;
+    public GameObject resumeButton;
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
         player.transform.Find("Crab_sprite").GetComponent<Animator>().enabled = false;
+        eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
         gameWon = false;
         paused = false;
 	}
@@ -49,6 +53,7 @@ public class GameController : MonoBehaviour {
                     Time.timeScale = 0;
                     pauseCanvas.enabled = true;
                     paused = true;
+                    eventSystem.SetSelectedGameObject(resumeButton);
                 }
             }
             else if (paused)
@@ -76,6 +81,24 @@ public class GameController : MonoBehaviour {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
+    }
+    public void resume()
+    {
+        if (paused)
+        {
+            player.setInput(true);
+            Time.timeScale = 1;
+            pauseCanvas.enabled = false;
+            paused = false;
+        }
+    }
+    public void goToMainMenu()
+    {
+        if (paused)
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
 }
