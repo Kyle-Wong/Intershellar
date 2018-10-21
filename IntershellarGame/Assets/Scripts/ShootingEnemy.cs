@@ -6,6 +6,7 @@ public class ShootingEnemy : MonoBehaviour {
 	private GameObject player;
 	public int initialRotation;
 	[Header("Bullet")]
+	public float range;
 	public AudioClip shootSE;
 	public GameObject bullet;
 	private float timer;
@@ -40,7 +41,7 @@ public class ShootingEnemy : MonoBehaviour {
 
 	private void CheckShoot()
 	{
-		if(Vector2.Distance(transform.position, player.transform.position) < 5)
+		if(Vector2.Distance(transform.position, player.transform.position) < range)
 		{
 			if(timer > shootInterval)
 			{
