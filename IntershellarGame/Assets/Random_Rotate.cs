@@ -14,11 +14,11 @@ public class Random_Rotate : MonoBehaviour {
         {
             sign = -1.0f;
         }
-        randomRotation = Random.Range(0.0f,0.5f) * 10.0f;
+        randomRotation = Random.Range(-rotate_speed,rotate_speed) * 10.0f;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(0,0,randomRotation * sign);
+        transform.Rotate(0,0,randomRotation * sign*Time.deltaTime);
 	}
 }

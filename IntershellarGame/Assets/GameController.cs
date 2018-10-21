@@ -22,15 +22,8 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (paused)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-            {
-                Time.timeScale = 1;
-                pauseCanvas.enabled = false;
-                paused = false;
-            }
-        }
+
+        
         if (gameWon)
         {
             Time.timeScale = 0;
@@ -51,14 +44,27 @@ public class GameController : MonoBehaviour {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
-        else if(!paused)
+        else 
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+            if (!paused)
             {
-                Time.timeScale = 0;
-                pauseCanvas.enabled = true;
-                paused = true;
+                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+                {
+                    Time.timeScale = 0;
+                    pauseCanvas.enabled = true;
+                    paused = true;
+                }
+            }
+            else if (paused)
+            {
+                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+                {
+                    Time.timeScale = 1;
+                    pauseCanvas.enabled = false;
+                    paused = false;
+                }
             }
         }
+
 	}
 }
