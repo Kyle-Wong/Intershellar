@@ -246,42 +246,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114731878248541210, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2,
+    - target: {fileID: 212282579286222808, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2,
         type: 2}
-      propertyPath: shootSE
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8300000, guid: d0e5eae0aaf2c47449d5a56bae7f1ece, type: 3}
-    - target: {fileID: 114731878248541210, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2,
+      objectReference: {fileID: 21300000, guid: 7eaabff32cfa1b648a8693c51b4d1a0a,
+        type: 3}
+    - target: {fileID: 4782004994208252, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.296
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782004994208252, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 58788622502341524, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2,
         type: 2}
-      propertyPath: shootInterval
-      value: 3
+      propertyPath: m_Offset.x
+      value: -0.0034142137
+      objectReference: {fileID: 0}
+    - target: {fileID: 58788622502341524, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.5038273
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &204086275 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1777484830189706, guid: 1f756e2cb63e4dd4fbe5de3ea2075dd2,
-    type: 2}
-  m_PrefabInternal: {fileID: 105210721}
---- !u!95 &204086276
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204086275}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ac4224aebc8f9441864a09cc570a693, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &277091172
 Prefab:
   m_ObjectHideFlags: 0
@@ -378,6 +369,11 @@ Prefab:
       propertyPath: hurtParticles
       value: 
       objectReference: {fileID: 385755888}
+    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
+        type: 2}
+      propertyPath: timer
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
   m_IsPrefabAsset: 0

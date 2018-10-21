@@ -27,7 +27,12 @@ public class ShootingEnemy : MonoBehaviour {
 	private void FacePlayer()
 	{
 		//turn left or right?
-		//if()
+		if(player.transform.position.x < transform.position.x && !GetComponent<SpriteRenderer>().flipY)
+		{
+			GetComponent<SpriteRenderer>().flipY = true;
+		}else if(player.transform.position.x > transform.position.x && GetComponent<SpriteRenderer>().flipY){
+			GetComponent<SpriteRenderer>().flipY = false;
+		}
 		Vector2 differ = player.transform.position - transform.position;
 		float rotation = Mathf.Atan2(differ.y, differ.x) * Mathf.Rad2Deg;
 		transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, rotation + initialRotation);
@@ -39,14 +44,20 @@ public class ShootingEnemy : MonoBehaviour {
 		{
 			if(timer > shootInterval)
 			{
-				GetComponent<Animator>().SetTrigger("Shoot");
-				AudioSource.PlayClipAtPoint(shootSE, GameObject.FindWithTag("MainCamera").transform.position);
-				//GetComponent<AudioSource>().PlayOneShot(shootSE);
 				timer = 0;
-				GameObject bulletObject = GameObject.Instantiate(bullet, transform.Find("mouse").position, Quaternion.identity);
-				bulletObject.GetComponent<EnemyBullet>().SetVelocity(transform.rotation.eulerAngles.z);
+				StartCoroutine(Shoot());
 			}
 		}
+	}
+
+	private IEnumerator Shoot()
+	{
+		GetComponent<Animator>().SetTrigger("Shoot");
+		yield return new WaitForSeconds(0.3f);
+		AudioSource.PlayClipAtPoint(shootSE, GameObject.FindWithTag("MainCamera").transform.position);
+		//GetComponent<AudioSource>().PlayOneShot(shootSE);
+		GameObject bulletObject = GameObject.Instantiate(bullet, transform.Find("mouse").position, Quaternion.identity);
+		bulletObject.GetComponent<EnemyBullet>().SetVelocity(transform.rotation.eulerAngles.z);
 	}
 
 }
