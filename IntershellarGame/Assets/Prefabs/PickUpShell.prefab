@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58741857081070708}
   - component: {fileID: 61444393965365780}
   - component: {fileID: 114864458665877324}
+  - component: {fileID: 114953432360122826}
   m_Layer: 0
   m_Name: PickUpShell
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1253666959217676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4933882, y: -3.0956035, z: 0}
+  m_LocalPosition: {x: 7.31, y: -16.62, z: 0}
   m_LocalScale: {x: 1.7621, y: 1.7621, z: 1.7621}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,7 +96,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomizeSprite: 1
-  worth: 15
+  worth: 2
+--- !u!114 &114953432360122826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253666959217676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342dfd8a3cfb3284999bac6ec6818a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotate_speed: 5
 --- !u!212 &212046125056049054
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -131,7 +144,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f1d5adb3242fa2149934e99808acd00f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 554c58e2a157ed840977c9591e444f5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
