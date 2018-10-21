@@ -319,11 +319,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114864458665877324, guid: 21e44c028ed037f43a3fa2c60e554f42,
-        type: 2}
-      propertyPath: worth
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1253666959217676, guid: 21e44c028ed037f43a3fa2c60e554f42, type: 2}
       propertyPath: m_Name
       value: PickUpShell (2)
@@ -1100,6 +1095,11 @@ Prefab:
     - target: {fileID: 4384999806233334, guid: 9e8d01d4802c8444cad553a6472518c5, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119313955107934, guid: 9e8d01d4802c8444cad553a6472518c5,
+        type: 2}
+      propertyPath: closeColor.a
+      value: 0.65882355
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e8d01d4802c8444cad553a6472518c5, type: 2}
