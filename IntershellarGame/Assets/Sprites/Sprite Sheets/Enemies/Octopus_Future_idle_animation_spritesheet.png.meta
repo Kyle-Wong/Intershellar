@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 7eaabff32cfa1b648a8693c51b4d1a0a
+guid: 1a5dbf2c0e8f9f046ae96b1851c28d9c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Octopus_idle_animation_spritesheet_0
-    21300002: Octopus_idle_animation_spritesheet_1
-    21300004: Octopus_idle_animation_spritesheet_2
-    21300006: Octopus_idle_animation_spritesheet_3
-    21300008: Octopus_idle_animation_spritesheet_4
-    21300010: Octopus_idle_animation_spritesheet_5
-    21300012: Octopus_idle_animation_spritesheet_6
-    21300014: Octopus_idle_animation_spritesheet_7
-    21300016: Octopus_idle_animation_spritesheet_8
-    21300018: Octopus_idle_animation_spritesheet_9
-    21300020: Octopus_idle_animation_spritesheet_10
-    21300022: Octopus_idle_animation_spritesheet_11
-    21300024: Octopus_idle_animation_spritesheet_12
-    21300026: Octopus_idle_animation_spritesheet_13
-    21300028: Octopus_idle_animation_spritesheet_14
-    21300030: Octopus_idle_animation_spritesheet_15
-    21300032: Octopus_idle_animation_spritesheet_16
-    21300034: Octopus_idle_animation_spritesheet_17
+    21300000: Octopus_Future_idle_animation_spritesheet_0
+    21300002: Octopus_Future_idle_animation_spritesheet_1
+    21300004: Octopus_Future_idle_animation_spritesheet_2
+    21300006: Octopus_Future_idle_animation_spritesheet_3
+    21300008: Octopus_Future_idle_animation_spritesheet_4
+    21300010: Octopus_Future_idle_animation_spritesheet_5
+    21300012: Octopus_Future_idle_animation_spritesheet_6
+    21300014: Octopus_Future_idle_animation_spritesheet_7
+    21300016: Octopus_Future_idle_animation_spritesheet_8
+    21300018: Octopus_Future_idle_animation_spritesheet_9
+    21300020: Octopus_Future_idle_animation_spritesheet_10
+    21300022: Octopus_Future_idle_animation_spritesheet_11
+    21300024: Octopus_Future_idle_animation_spritesheet_12
+    21300026: Octopus_Future_idle_animation_spritesheet_13
+    21300028: Octopus_Future_idle_animation_spritesheet_14
+    21300030: Octopus_Future_idle_animation_spritesheet_15
+    21300032: Octopus_Future_idle_animation_spritesheet_16
+    21300034: Octopus_Future_idle_animation_spritesheet_17
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -124,7 +124,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_0
+      name: Octopus_Future_idle_animation_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -138,13 +138,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6ec082d27a23b4683f81afe3c437d3
+      spriteID: 238fda6515530034d985315a520dc9d8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_1
+      name: Octopus_Future_idle_animation_spritesheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -158,13 +158,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0b0f3842f779364392ec189956e71a1
+      spriteID: cb5b4a29d7e0c79418226c9cf99fc20d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_2
+      name: Octopus_Future_idle_animation_spritesheet_2
       rect:
         serializedVersion: 2
         x: 256
@@ -178,13 +178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7235096d4aff227489c5e1f360a404e4
+      spriteID: a87912cd7cf01a74eb5bbefc2c866c52
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_3
+      name: Octopus_Future_idle_animation_spritesheet_3
       rect:
         serializedVersion: 2
         x: 384
@@ -198,13 +198,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bdf87970d5c8cd4691c068a937bde46
+      spriteID: 6210c53544c1ce24385626c28322b6b2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_4
+      name: Octopus_Future_idle_animation_spritesheet_4
       rect:
         serializedVersion: 2
         x: 512
@@ -218,13 +218,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb81e2ea4ec38e144b3137604f498577
+      spriteID: 68502eeea52d4ea4b972aef0abca3840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_5
+      name: Octopus_Future_idle_animation_spritesheet_5
       rect:
         serializedVersion: 2
         x: 640
@@ -238,13 +238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c21b7c603805b49b32de6e68656722
+      spriteID: ade8fab1b504ab2419f4c049c2e1d859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_6
+      name: Octopus_Future_idle_animation_spritesheet_6
       rect:
         serializedVersion: 2
         x: 768
@@ -258,13 +258,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18e4922aa1a04be41972faee01c3a08b
+      spriteID: 027fe5b2d4771cd44922f8bc209e6aed
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_7
+      name: Octopus_Future_idle_animation_spritesheet_7
       rect:
         serializedVersion: 2
         x: 896
@@ -278,13 +278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9853acde8b1cad4e88d55552dd95ba2
+      spriteID: 15b579f40f1285e4a91f5007b1940ee1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_8
+      name: Octopus_Future_idle_animation_spritesheet_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -298,13 +298,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d0362909e10b0c4ebcef08c138d17b9
+      spriteID: 973c33f28eab18646aaf926b541d45ea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_9
+      name: Octopus_Future_idle_animation_spritesheet_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -318,13 +318,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475cec832bec37348917ef459c82f74b
+      spriteID: 4c3adafbcc00c834fbe0a1c106d22d39
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_10
+      name: Octopus_Future_idle_animation_spritesheet_10
       rect:
         serializedVersion: 2
         x: 1280
@@ -338,13 +338,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03decbe7f56ff8547b17287e10eeac9d
+      spriteID: 9ced693880b9be74db4015a0323c6f6c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_11
+      name: Octopus_Future_idle_animation_spritesheet_11
       rect:
         serializedVersion: 2
         x: 1408
@@ -358,13 +358,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c63aad1f4734f74fb0c5df7fc10573d
+      spriteID: e362421ad5c251e49aa5476bb1c14177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_12
+      name: Octopus_Future_idle_animation_spritesheet_12
       rect:
         serializedVersion: 2
         x: 1536
@@ -378,13 +378,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4594aa048fd7f7440bdc262cb83e1f7d
+      spriteID: f2739424e1441e545ba4393308bb668f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_13
+      name: Octopus_Future_idle_animation_spritesheet_13
       rect:
         serializedVersion: 2
         x: 1664
@@ -398,13 +398,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c645a4e7c1b1b45bc97b0e11d1d991
+      spriteID: 92ca4e526df9e8c4f9455bd6d9b3c79c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_14
+      name: Octopus_Future_idle_animation_spritesheet_14
       rect:
         serializedVersion: 2
         x: 1792
@@ -418,13 +418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d00ef97985047ba49b3e1310925d64e5
+      spriteID: 30c3d6cbf68ca224d993b4915ae40e13
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_15
+      name: Octopus_Future_idle_animation_spritesheet_15
       rect:
         serializedVersion: 2
         x: 1920
@@ -438,13 +438,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f1e0eda7587af249847ce516fca9c84
+      spriteID: 6791d4021195e2d458348bf6d45f87da
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_16
+      name: Octopus_Future_idle_animation_spritesheet_16
       rect:
         serializedVersion: 2
         x: 2048
@@ -458,13 +458,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bd63193b12141648be34e422b003509
+      spriteID: e5e609ed632523d449f7cab1cc49b973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Octopus_idle_animation_spritesheet_17
+      name: Octopus_Future_idle_animation_spritesheet_17
       rect:
         serializedVersion: 2
         x: 2176
@@ -478,7 +478,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95456e29ba7a8bb41979fc5f4e821db6
+      spriteID: b395761aa65269f4984e9c43efa59bfc
       vertices: []
       indices: 
       edges: []
@@ -486,7 +486,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f635542f47b18634a97cb539e67fb8ad
+    spriteID: 647105dab3a37f24ca687a05a1d63a99
     vertices: []
     indices: 
     edges: []
