@@ -29,8 +29,13 @@ public class Player_Movement : MonoBehaviour {
     private Rigidbody2D rb;
     private bool isDead;
     private bool allowInput = true;
+    private AudioSource source;
+    public AudioClip pickupSound;
+    public AudioClip dash;
+    private float volume;
 	// Use this for initialization
 	public void Start () {
+        source = GetComponent<AudioSource>();
         shellCount = 0;
         rb = GetComponent<Rigidbody2D>();
         shellList = GameObject.FindGameObjectWithTag("ShellData").GetComponent<ShellList>();
@@ -38,9 +43,24 @@ public class Player_Movement : MonoBehaviour {
         velocity = new Vector3(0, 0, 0);
         timing = timer;
         stacker = GetComponent<ShellStack>();
-        Gain_Shell(startingShells,-1);
-        
-	}
+        int shellType = -1;
+        int worth = startingShells;
+        for (int i = 0; i < worth; i++)
+        {
+            int addType = (shellType == -1) ? (int)Random.Range(0, shellList.shellSprite.Length) : shellType;
+            if (shellCount == 0)
+            {
+                spriteRenderer.sprite = shellList.playerShellSprite[addType];
+                mySpriteId = addType;
+            }
+            else
+            {
+                stacker.addShell(addType);
+            }
+            shellCount++;
+        }
+
+    }
 	
 	// Update is called once per frame
 	public void Update () {
@@ -89,7 +109,7 @@ public class Player_Movement : MonoBehaviour {
             }
             shellCount++;
         }
-        
+        source.PlayOneShot(pickupSound);
     }
     public void Lose_Shell()
     {
@@ -154,6 +174,7 @@ public class Player_Movement : MonoBehaviour {
         rb.velocity = playerDir * playerLeapVelocity;
         shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
         Lose_Shell();
+        source.PlayOneShot(dash);
         //dash self
     }
     public bool dead()

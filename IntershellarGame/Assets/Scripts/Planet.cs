@@ -9,9 +9,12 @@ public class Planet : MonoBehaviour {
 	public float force;
 	public float perpendicularForce;
 	public float maxSpeed;
-
+    private bool inRange;
+    private AudioSource source;
+    private float volume;
 	// Use this for initialization
 	void Start () {
+        source = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
 	}
 	void OnDrawGizmosSelected()
@@ -31,10 +34,21 @@ public class Planet : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		//player.GetComponent<Rigidbody2D>().velocity *= 0.99f;
-		//attract player if in range
-		if(Vector2.Distance(transform.position, player.transform.position) <= rangeRadius)
-			Attract();
+        //player.GetComponent<Rigidbody2D>().velocity *= 0.99f;
+        //attract player if in range
+        if (Vector2.Distance(transform.position, player.transform.position) <= rangeRadius)
+        {
+            float distance = (transform.position - player.transform.position).magnitude;
+            source.volume = Mathf.Lerp(1, 0, (distance - circleAroundRadius) / (rangeRadius - circleAroundRadius));
+            if (!inRange)
+                source.Play();
+            
+            inRange = true;
+            Attract();
+        } else
+        {
+            inRange = false;
+        }
 	}
 
 	private void Attract()
@@ -56,17 +70,7 @@ public class Planet : MonoBehaviour {
 		{
 			attractVector = new Vector2(0,0);
 		}
-        //give perpendicular force towards the direction player moves
-        /*
-		Vector2 perpendicularVector = new Vector2(attractDirection.y, - attractDirection.x) * perpendicularForce;
-		
-		float playerAngle = Mathf.Atan2(player.GetComponent<Rigidbody2D>().velocity.y, player.GetComponent<Rigidbody2D>().velocity.x) * Mathf.Rad2Deg;
-		Debug.Log(player.GetComponent<Rigidbody2D>().velocity);
-		if(Mathf.Abs(perpendicularAngle - playerAngle) < 80)
-		{
-			perpendicularVector = new Vector2(-attractDirection.y, attractDirection.x) * perpendicularForce;
-		}
-        */
+       
         Vector2 ccVector = Vector2.Perpendicular(transform.position - player.transform.position);
         Vector2 cVector = Vector2.Perpendicular(player.transform.position - transform.position);
         Vector2 perpendicularVector = new Vector2();
