@@ -37,24 +37,27 @@ public class HazardShellRemove : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (timing <= 0)
+        if (collision.tag == "Player")
         {
-            //Removes a shell from the crab
-            for (int i = 0; i < shellLossWorth; i++)
+            if (timing <= 0)
             {
-                if (movement.shellCount > 0)
+                //Removes a shell from the crab
+                for (int i = 0; i < shellLossWorth; i++)
                 {
-                    movement.spawnLooseShell();
-                    movement.Lose_Shell();
+                    if (movement.shellCount > 0)
+                    {
+                        movement.spawnLooseShell();
+                        movement.Lose_Shell();
+                    }
                 }
+                timing = timer;
             }
-            timing = timer;
-        }
 
-        //repulses the player from the hazard
-        Vector2 repulsionDirection = -(transform.position - movement.transform.position);
-        Vector2 repulsionForce = repulsionDirection * forceConstant;
-        player.transform.GetComponent<Rigidbody2D>().AddForce(repulsionForce * 2);
-        Debug.Log(repulsionForce);
+            //repulses the player from the hazard
+            Vector2 repulsionDirection = -(transform.position - movement.transform.position);
+            Vector2 repulsionForce = repulsionDirection * forceConstant;
+            player.transform.GetComponent<Rigidbody2D>().AddForce(repulsionForce * 2);
+            Debug.Log(repulsionForce);
+        }
     }
 }
