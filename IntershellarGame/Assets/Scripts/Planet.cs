@@ -39,7 +39,7 @@ public class Planet : MonoBehaviour {
         if (Vector2.Distance(transform.position, player.transform.position) <= rangeRadius)
         {
             float distance = (transform.position - player.transform.position).magnitude;
-            source.volume = Mathf.Lerp(1, 0, (distance - circleAroundRadius) / (rangeRadius - circleAroundRadius));
+            source.volume = Mathf.Lerp(.75f, 0, (distance - circleAroundRadius) / (rangeRadius - circleAroundRadius));
             if (!inRange)
                 source.Play();
             
