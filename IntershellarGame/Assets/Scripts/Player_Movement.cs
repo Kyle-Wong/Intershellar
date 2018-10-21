@@ -10,7 +10,8 @@ public class Player_Movement : MonoBehaviour {
     float crab_speed = 1f;
     float rotation_speed = 10f;
     public float timer;
-    private float timing;
+    [HideInInspector]
+    public float timing;
     public float drag;
     public float playerLeapVelocity;
     public float shellShotSpeed;
