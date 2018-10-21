@@ -241,10 +241,12 @@ MonoBehaviour:
   shellCount: 5
   startingShells: 3
   nakedSprite: {fileID: 21300000, guid: 8dd6b7ed44ae98a449b0b671a1225d01, type: 3}
-  projectileParticles: {fileID: 0}
-  hurtParticles: {fileID: 0}
-  pickupSound: {fileID: 0}
-  dash: {fileID: 0}
+  projectileParticles: {fileID: 4286472773735776, guid: 2853c88e54100d54897d818fd1770a75,
+    type: 2}
+  hurtParticles: {fileID: 4309292654765818, guid: c09780713fff2764abeb2c436da9afbe,
+    type: 2}
+  pickupSound: {fileID: 8300000, guid: b4167293300a31b4ea6ab4cc79a313d0, type: 3}
+  dash: {fileID: 8300000, guid: 357ba6b34e02e7b4cb1a43d269a7c696, type: 3}
 --- !u!212 &212301323112787986
 SpriteRenderer:
   m_ObjectHideFlags: 1

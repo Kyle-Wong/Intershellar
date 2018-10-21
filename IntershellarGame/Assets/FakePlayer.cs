@@ -6,13 +6,13 @@ public class FakePlayer : Player_Movement {
 
     // Use this for initialization
     public Vector2 v;
-    Rigidbody2D rb;
+    Rigidbody2D r;
 	public void Start () {
-        rb = GetComponent<Rigidbody2D>();
+        r = GetComponent<Rigidbody2D>();
 	}   
 	
 	// Update is called once per frame
 	public void Update () {
-        rb.velocity = v;
+        r.velocity = v;
 	}
 }
