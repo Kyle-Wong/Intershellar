@@ -8,6 +8,7 @@ public class ShellList : MonoBehaviour {
     public Sprite[] shellSprite;
     public Sprite[] playerShellSprite;
     public Sprite[] tripleShellSprite;
+    public RuntimeAnimatorController[] shellAnimation;
 	void Start () {
 		
 	}
@@ -28,5 +29,8 @@ public class ShellList : MonoBehaviour {
     {
         return tripleShellSprite[x];
     }
-
+    public RuntimeAnimatorController getAnimation(int x)
+    {
+        return shellAnimation[x];
+    }
 }

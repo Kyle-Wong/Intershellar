@@ -194,6 +194,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 224014151685159950, guid: be4e1c0fc18707545bf9c73032c45483,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224126547841376812, guid: be4e1c0fc18707545bf9c73032c45483,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224673888459239418, guid: be4e1c0fc18707545bf9c73032c45483,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224363436931524208, guid: be4e1c0fc18707545bf9c73032c45483,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be4e1c0fc18707545bf9c73032c45483, type: 2}
   m_IsPrefabAsset: 0
@@ -518,6 +538,8 @@ MonoBehaviour:
   nakedSprite: {fileID: 0}
   projectileParticles: {fileID: 0}
   hurtParticles: {fileID: 0}
+  pickupSound: {fileID: 0}
+  dash: {fileID: 0}
 --- !u!1 &2100906216
 GameObject:
   m_ObjectHideFlags: 0

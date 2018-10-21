@@ -176,6 +176,7 @@ public class Player_Movement : MonoBehaviour {
         shellObject.GetComponent<Projectile>().setVelocity(-1 * playerDir * shellShotSpeed);
         rb.velocity = playerDir * playerLeapVelocity;
         shellObject.GetComponent<SpriteRenderer>().sprite = shellList.getShellSprite(shellType);
+        shellObject.GetComponent<Animator>().runtimeAnimatorController = shellList.getAnimation(shellType);
         Lose_Shell();
         source.PlayOneShot(dash);
         //dash self

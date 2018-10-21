@@ -236,7 +236,7 @@ MonoBehaviour:
   timer: 3
   timing: 0
   drag: 0.99
-  playerLeapVelocity: 5
+  playerLeapVelocity: 7
   shellShotSpeed: 5
   shellCount: 5
   startingShells: 3
