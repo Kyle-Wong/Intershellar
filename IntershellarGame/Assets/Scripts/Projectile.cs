@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour {
     private Vector3 velocity;
     public float lifeTime = 4;
     private float lifeTimer = 0;
+    public GameObject hurtParticle;
 	void Start () {
 		
 	}
@@ -26,7 +27,11 @@ public class Projectile : MonoBehaviour {
 	{
 		//kill enemies
 		if(other.CompareTag("Enemy"))
+        {
 			Destroy(other.gameObject);
+            GameObject particle = GameObject.Instantiate(hurtParticle, transform.position,Quaternion.identity);
+            particle.GetComponent<ParticleSystem>().Play();
+        }
 		if(!other.CompareTag("Player") && !other.CompareTag("Projectile"))
 			Destroy(gameObject);
 	}
