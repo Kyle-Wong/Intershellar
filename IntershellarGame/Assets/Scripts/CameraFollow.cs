@@ -11,6 +11,9 @@ public class CameraFollow : MonoBehaviour {
 	public bool hasRange;
 	public Vector2 leftLower;
 	public Vector2 rightUpper;
+	[Header("For zoom in/out")]
+	public float minSize;
+	public float maxSize;
 	// Use this for initialization
 	void Start () {
 		shellCount = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount;
@@ -20,7 +23,7 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
 		Follow();
 		TestResize();
-		/* 
+		
 		if(Input.GetKeyDown(KeyCode.Q))
 		{
 			GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount++;
@@ -30,7 +33,7 @@ public class CameraFollow : MonoBehaviour {
 		{
 			GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount--;
 			GameObject.FindGameObjectWithTag("Player").GetComponent<ShellStack>().removeShell();
-		}*/
+		}
 	}
 
 	private void Follow()
@@ -59,13 +62,13 @@ public class CameraFollow : MonoBehaviour {
 	private void TestResize()
 	{
 		int crabNum = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().shellCount;
-		if(crabNum >= 8 && crabNum != shellCount)
+		if(crabNum >= (2 * minSize - 2) && crabNum != shellCount)
 		{
 			shellCount = crabNum;
 			//when larger than 28 shells, only increase to 28 * 0.5 + 1
-			if(shellCount > 28 && gameObject.GetComponent<Camera>().orthographicSize < 15)
-				StartCoroutine(SmoothResize(15 - gameObject.GetComponent<Camera>().orthographicSize));
-			else if(shellCount <= 28)
+			if(shellCount > (2 * maxSize - 2) && gameObject.GetComponent<Camera>().orthographicSize < maxSize)
+				StartCoroutine(SmoothResize(maxSize - gameObject.GetComponent<Camera>().orthographicSize));
+			else if(shellCount <= (2 * maxSize - 2))
 				StartCoroutine(SmoothResize(1 + 0.5f * crabNum - gameObject.GetComponent<Camera>().orthographicSize));
 		}
 	}
