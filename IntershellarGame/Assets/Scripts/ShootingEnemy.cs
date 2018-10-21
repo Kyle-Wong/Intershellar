@@ -39,6 +39,7 @@ public class ShootingEnemy : MonoBehaviour {
 		{
 			if(timer > shootInterval)
 			{
+				GetComponent<Animator>().SetTrigger("Shoot");
 				AudioSource.PlayClipAtPoint(shootSE, GameObject.FindWithTag("MainCamera").transform.position);
 				//GetComponent<AudioSource>().PlayOneShot(shootSE);
 				timer = 0;
