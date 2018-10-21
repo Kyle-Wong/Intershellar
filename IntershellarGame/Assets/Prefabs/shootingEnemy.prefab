@@ -141,7 +141,7 @@ MonoBehaviour:
   hurtSE: {fileID: 8300000, guid: 056f4405d3463c44cb7273f3482a07e6, type: 3}
   range: 5
   shootSE: {fileID: 8300000, guid: d0e5eae0aaf2c47449d5a56bae7f1ece, type: 3}
-  bullet: {fileID: 1341571873857510, guid: c5da4db34676cfe45b58d847eb5505ef, type: 2}
+  bullet: {fileID: 1492678313180550, guid: 637f3cb6e37a08649ad2b2bc63d63159, type: 2}
   shootInterval: 3
 --- !u!212 &212282579286222808
 SpriteRenderer:
