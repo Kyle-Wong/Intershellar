@@ -36,13 +36,7 @@ public class GameController : MonoBehaviour {
         }
         else if (player.dead())
         {
-            Time.timeScale = 0;
-            deadCanvas.enabled = true;
-            if (Input.GetButtonDown("Submit"))
-            {
-                Time.timeScale = 1;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            StartCoroutine(PlayerDie());
         }
         else 
         {
@@ -67,4 +61,17 @@ public class GameController : MonoBehaviour {
         }
 
 	}
+
+    private IEnumerator PlayerDie()
+    {
+        player.transform.Find("Crab_sprite").GetComponent<Animator>().SetTrigger("Die");
+        yield return new WaitForSeconds(1);
+        Time.timeScale = 0;
+        deadCanvas.enabled = true;
+        yield return new WaitUntil(() => Input.GetButtonDown("Submit"));
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+    }
+
 }
