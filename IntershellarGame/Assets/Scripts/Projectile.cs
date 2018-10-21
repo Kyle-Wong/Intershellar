@@ -31,8 +31,10 @@ public class Projectile : MonoBehaviour {
 			other.GetComponent<ShootingEnemy>().Hurt();
             GameObject particle = GameObject.Instantiate(hurtParticle, transform.position,Quaternion.identity);
             particle.GetComponent<ParticleSystem>().Play();
+            GetComponent<Animator>().SetTrigger("Break");
+			Destroy(gameObject, 2);
         }
-		if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Projectile"))
+		if(other.gameObject.CompareTag("Planet"))
         {
             GetComponent<Animator>().SetTrigger("Break");
 			Destroy(gameObject, 2);
