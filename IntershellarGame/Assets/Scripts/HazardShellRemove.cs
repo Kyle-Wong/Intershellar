@@ -7,7 +7,7 @@ public class HazardShellRemove : MonoBehaviour {
     private ShellStack shellRemover;
     private Player_Movement movement;
     private GameObject player;
-    public float forceConstant;
+    private float forceConstant;
     private float timer = .5f;
     private float timing;
 
@@ -17,6 +17,7 @@ public class HazardShellRemove : MonoBehaviour {
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>();
         shellRemover = GameObject.FindGameObjectWithTag("Player").GetComponent<ShellStack>();
         timing = 0;
+        forceConstant = 200;
 	}
 	
 	// Update is called once per frame
@@ -47,8 +48,9 @@ public class HazardShellRemove : MonoBehaviour {
         }
 
         //repulses the player from the hazard
-        Vector2 repulsionDirection = -(transform.position - movement.getVelocity());
+        Vector2 repulsionDirection = -(transform.position - movement.transform.position);
         Vector2 repulsionForce = repulsionDirection * forceConstant;
-        player.transform.GetComponent<Rigidbody2D>().AddForce(repulsionForce);
+        player.transform.GetComponent<Rigidbody2D>().AddForce(repulsionForce * 2);
+        Debug.Log(repulsionForce);
     }
 }
