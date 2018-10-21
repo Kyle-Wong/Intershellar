@@ -1020,11 +1020,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4327340831168700, guid: 8da0a3e1e0ac0e7458fdd06efe95b036, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -162.55
+      value: -163.4
       objectReference: {fileID: 0}
     - target: {fileID: 4327340831168700, guid: 8da0a3e1e0ac0e7458fdd06efe95b036, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -229.78018
+      value: -230.47
       objectReference: {fileID: 0}
     - target: {fileID: 4327340831168700, guid: 8da0a3e1e0ac0e7458fdd06efe95b036, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 1134121077}
-  angularSpeed: 10
+  angularSpeed: 20
 --- !u!1001 &1629513314
 Prefab:
   m_ObjectHideFlags: 0
@@ -1729,7 +1729,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4152504562324084, guid: 21e44c028ed037f43a3fa2c60e554f42, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -171.66
+      value: -169.21
       objectReference: {fileID: 0}
     - target: {fileID: 4152504562324084, guid: 21e44c028ed037f43a3fa2c60e554f42, type: 2}
       propertyPath: m_LocalPosition.y
