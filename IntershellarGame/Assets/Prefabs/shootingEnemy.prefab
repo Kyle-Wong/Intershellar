@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 114731878248541210}
   - component: {fileID: 58788622502341524}
   - component: {fileID: 95603759277010528}
+  - component: {fileID: 50833126170459698}
   m_Layer: 0
   m_Name: shootingEnemy
   m_TagString: Enemy
@@ -72,6 +73,26 @@ Transform:
   m_Father: {fileID: 4413632955933770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50833126170459698
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777484830189706}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58788622502341524
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -117,6 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialRotation: 0
+  hurtSE: {fileID: 8300000, guid: 056f4405d3463c44cb7273f3482a07e6, type: 3}
+  range: 5
   shootSE: {fileID: 8300000, guid: d0e5eae0aaf2c47449d5a56bae7f1ece, type: 3}
   bullet: {fileID: 1341571873857510, guid: c5da4db34676cfe45b58d847eb5505ef, type: 2}
   shootInterval: 3
@@ -155,7 +178,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2060e4d401ca2d947a1d4a32a9e50c7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 639348d6427eca2488dcb49f8767cd88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour {
 		//kill enemies
 		if(other.gameObject.CompareTag("Enemy"))
         {
-			Destroy(other.gameObject);
+			other.GetComponent<ShootingEnemy>().Hurt();
             GameObject particle = GameObject.Instantiate(hurtParticle, transform.position,Quaternion.identity);
             particle.GetComponent<ParticleSystem>().Play();
         }
