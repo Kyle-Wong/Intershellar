@@ -506,6 +506,8 @@ MonoBehaviour:
   hasRange: 0
   leftLower: {x: 0, y: 0}
   rightUpper: {x: 0, y: 0}
+  minSize: 0
+  maxSize: 0
 --- !u!1001 &902796333
 Prefab:
   m_ObjectHideFlags: 0
@@ -737,17 +739,17 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224126547841376812, guid: be4e1c0fc18707545bf9c73032c45483,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224673888459239418, guid: be4e1c0fc18707545bf9c73032c45483,
         type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224363436931524208, guid: be4e1c0fc18707545bf9c73032c45483,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224126547841376812, guid: be4e1c0fc18707545bf9c73032c45483,
         type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
