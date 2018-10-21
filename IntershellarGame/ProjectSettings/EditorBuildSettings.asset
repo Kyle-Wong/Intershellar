@@ -26,4 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MCOPY_GameScene.unity
     guid: ec608b204f986ef468f9def4dbdc4643
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 3150ceb766babd648ac5c8eba3344822
+  - enabled: 1
+    path: Assets/Scenes/Tim Solar 1.unity
+    guid: d6fb18c57fbb571499a8e02a9afbb925
+  - enabled: 1
+    path: Assets/Scenes/Tim Sweet 1.unity
+    guid: d28de5f8cd5fa154389866c8b8e63eab
+  - enabled: 1
+    path: Assets/Scenes/Tim Water 1.unity
+    guid: bde8ff1a49847e94589fdecfe317bac6
   m_configObjects: {}

@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour {
     // Use this for initialization
     public string firstLevelName;
     public string creditsSceneName;
+    public string levelSelectName;
 	void Awake () {
 	}
 	
@@ -15,6 +16,10 @@ public class MainMenuController : MonoBehaviour {
 	void Update () {
 		
 	}
+    public void goToLevelSelect()
+    {
+        SceneManager.LoadScene(levelSelectName);
+    }
     public void startGame()
     {
         SceneManager.LoadScene(firstLevelName);

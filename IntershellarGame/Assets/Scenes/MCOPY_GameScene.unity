@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 1781418323}
-  angularSpeed: 40
+  angularSpeed: 80
 --- !u!1001 &739984558
 Prefab:
   m_ObjectHideFlags: 0
@@ -1536,7 +1536,7 @@ Prefab:
     - target: {fileID: 114318234730793918, guid: be4e1c0fc18707545bf9c73032c45483,
         type: 2}
       propertyPath: nextScene
-      value: MainMenu
+      value: Josh
       objectReference: {fileID: 0}
     - target: {fileID: 114164022468055534, guid: be4e1c0fc18707545bf9c73032c45483,
         type: 2}
