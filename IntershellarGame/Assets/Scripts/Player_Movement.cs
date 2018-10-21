@@ -88,7 +88,9 @@ public class Player_Movement : MonoBehaviour {
                 transform.Rotate(0, 0, -rotation_speed);
             }
             if (Input.GetKeyDown(KeyCode.W) && shellCount > 0)
+            {
                 ShootShell();
+            }
         }
         NoShells();
     }
@@ -168,6 +170,7 @@ public class Player_Movement : MonoBehaviour {
                 shellType = mySpriteId;
             }
         }
+        Debug.Log("Check");
         Transform particles = Instantiate(projectileParticles, shellPosition, Quaternion.LookRotation(transform.forward, playerDir));
         Transform shellObject = Instantiate(shellProjectilePrefab, shellPosition, Quaternion.LookRotation(transform.forward,playerDir));
         shellObject.GetComponent<Projectile>().setVelocity(-1 * playerDir * shellShotSpeed);
