@@ -8,7 +8,7 @@ public class HazardShellRemove : MonoBehaviour {
     private Player_Movement movement;
     private GameObject player;
     public float forceConstant;
-    public float timer;
+    private float timer = .5f;
     private float timing;
 
 	// Use this for initialization
@@ -41,11 +41,7 @@ public class HazardShellRemove : MonoBehaviour {
             //Removes a shell from the crab
             for (int i = 0; i < shellLossWorth; i++)
             {
-                if (movement.Get_ShellCount() > 0)
-                {
-                    shellRemover.removeShell();
                     movement.Lose_Shell();
-                }
             }
             timing = timer;
         }
