@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99e06b9395ff8b47a94ee3403bb5272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromPlayer: 1
+  distanceFromPlayer: 8
   rotationAmend: -90
 --- !u!212 &212323810340168718
 SpriteRenderer:
