@@ -527,7 +527,7 @@ Prefab:
     - target: {fileID: 114864458665877324, guid: 21e44c028ed037f43a3fa2c60e554f42,
         type: 2}
       propertyPath: worth
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1253666959217676, guid: 21e44c028ed037f43a3fa2c60e554f42, type: 2}
       propertyPath: m_Name
