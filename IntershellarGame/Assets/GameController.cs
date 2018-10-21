@@ -37,6 +37,7 @@ public class GameController : MonoBehaviour {
             winCanvas.enabled = true;
             if (Input.GetButtonDown("Submit"))
             {
+                Time.timeScale = 1;
                 SceneManager.LoadScene(nextScene);
             }
         }
@@ -46,6 +47,7 @@ public class GameController : MonoBehaviour {
             deadCanvas.enabled = true;
             if (Input.GetButtonDown("Submit"))
             {
+                Time.timeScale = 1;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
