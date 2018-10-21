@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
                 {
+                    player.setInput(false);
                     Time.timeScale = 0;
                     pauseCanvas.enabled = true;
                     paused = true;
@@ -54,6 +55,7 @@ public class GameController : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
                 {
+                    player.setInput(true);
                     Time.timeScale = 1;
                     pauseCanvas.enabled = false;
                     paused = false;

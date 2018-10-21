@@ -97,6 +97,13 @@ public class Player_Movement : MonoBehaviour {
         }
         NoShells();
     }
+
+    //Changes allowInput
+    public void setInput(bool isInput)
+    {
+        allowInput = isInput;
+    }
+
     //Activates when crab collides with detached shell. Places shell on top of stack.
     public void Gain_Shell(int worth,int shellType)
     {
