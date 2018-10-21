@@ -34,6 +34,7 @@ public class Player_Movement : MonoBehaviour {
     private AudioSource source;
     public AudioClip pickupSound;
     public AudioClip dash;
+    public AudioClip exposureSound;
     private float volume;
 	// Use this for initialization
 	public void Start () {
@@ -125,6 +126,7 @@ public class Player_Movement : MonoBehaviour {
         {
             shellCount--;
             spriteRenderer.sprite = nakedSprite;
+            source.PlayOneShot(exposureSound);
         } 
     }
     public void spawnLooseShell()

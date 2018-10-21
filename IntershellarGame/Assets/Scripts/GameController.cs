@@ -6,7 +6,6 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     public string nextScene;
-    public AudioClip dieSE;
     [HideInInspector]
     public bool gameWon;
     [HideInInspector]
@@ -66,7 +65,6 @@ public class GameController : MonoBehaviour {
 
     private IEnumerator PlayerDie()
     {
-        AudioSource.PlayClipAtPoint(dieSE, GameObject.FindWithTag("MainCamera").transform.position);
         player.transform.Find("Crab_sprite").GetComponent<Animator>().enabled = true;
         player.transform.Find("Crab_sprite").GetComponent<Animator>().SetTrigger("Die");
         yield return new WaitForSeconds(1);
