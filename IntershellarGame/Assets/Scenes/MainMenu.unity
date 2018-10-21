@@ -963,9 +963,10 @@ GameObject:
   m_Component:
   - component: {fileID: 770794222}
   - component: {fileID: 770794221}
+  - component: {fileID: 770794223}
   m_Layer: 0
   m_Name: MusicObject
-  m_TagString: Untagged
+  m_TagString: UniqueMusicObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,7 +982,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c141ff2dad3e12442901cd37f49ab568, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.507
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1078,6 +1079,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770794223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770794220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d60eac7eac536418b9d2a5f5f03ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &974495018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa380e0e6ca06504393f23e5b2c9ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevelName: GameScene1
+  firstLevelName: MCOPY_GameScene
   creditsSceneName: CreditsScene
 --- !u!114 &974495020
 MonoBehaviour:
@@ -1648,6 +1660,8 @@ MonoBehaviour:
   nakedSprite: {fileID: 0}
   projectileParticles: {fileID: 0}
   hurtParticles: {fileID: 0}
+  spawnShell: {fileID: 0}
+  shellLossVelocity: 2
   pickupSound: {fileID: 0}
   dash: {fileID: 0}
   v: {x: 2, y: 1}

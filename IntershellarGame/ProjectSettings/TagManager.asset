@@ -9,6 +9,8 @@ TagManager:
   - Projectile
   - Planet
   - ShellData
+  - Goal
+  - UniqueMusicObject
   layers:
   - Default
   - TransparentFX

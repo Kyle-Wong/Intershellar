@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour {
 	public float speed;
 	public GameObject hurtParticle;
+	public AudioClip hitSE;
 	// Use this for initialization
 	void Start () {
 		
@@ -24,6 +25,7 @@ public class EnemyBullet : MonoBehaviour {
 		//when hit player
 		if(other.CompareTag("Player"))
 		{
+			AudioSource.PlayClipAtPoint(hitSE, GameObject.FindWithTag("MainCamera").transform.position);
 			GameObject particle = GameObject.Instantiate(hurtParticle, transform.position,Quaternion.identity);
 			particle.GetComponent<ParticleSystem>().Play();
 			other.GetComponent<Player_Movement>().Lose_Shell();
