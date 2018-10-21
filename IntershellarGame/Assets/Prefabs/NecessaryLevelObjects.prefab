@@ -482,6 +482,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3f6565979a793614a98e521a4435d846, type: 3}
   - {fileID: 21300000, guid: c73b7d54bf35b0c4794461b8767777e7, type: 3}
   - {fileID: 21300000, guid: d53890fca1241794aaaf35782df8c8c3, type: 3}
+  shellAnimation:
+  - {fileID: 9100000, guid: bbc54f6a3552cde45a49b63d84d527ea, type: 2}
+  - {fileID: 22100000, guid: 1987690e4a89e714fae9c45a9a736f6d, type: 2}
+  - {fileID: 22100000, guid: ca42e8ef59e8ace41be2048ddd2c0ef3, type: 2}
+  - {fileID: 22100000, guid: 71fa0483f66ac0642aa47f0be45d8d7b, type: 2}
+  - {fileID: 22100000, guid: 411bc6a06ee707946a613b2b1e7b79b5, type: 2}
+  - {fileID: 22100000, guid: ae33b68b1d362b84684d8d8dea706101, type: 2}
+  - {fileID: 22100000, guid: 20bcbe74945f822458aa85b82f84d8a0, type: 2}
+  - {fileID: 22100000, guid: 6720a7e0c3764b24d8a3917d9387b9d3, type: 2}
+  - {fileID: 22100000, guid: 59031426c6fa8b343bf427fda0ce6644, type: 2}
 --- !u!114 &114141583096401780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -654,6 +664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: 
+  gameWon: 0
+  paused: 0
   winCanvas: {fileID: 223998224781073200}
   deadCanvas: {fileID: 223517393611520012}
   pauseCanvas: {fileID: 223548227519571840}
@@ -899,6 +911,7 @@ MonoBehaviour:
   bigStarCount: 0
   midStarCount: 20
   smallStarCount: 30
+  requirePlayer: 1
 --- !u!114 &114841867765684762
 MonoBehaviour:
   m_ObjectHideFlags: 1

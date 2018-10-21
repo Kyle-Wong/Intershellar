@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 61637601581582692}
   - component: {fileID: 114976314948582288}
   - component: {fileID: 212330174962137956}
+  - component: {fileID: 95078765863377032}
   m_Layer: 0
   m_Name: PlaceholderProjectile
   m_TagString: Untagged
@@ -67,6 +68,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95078765863377032
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546761035436950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114976314948582288
 MonoBehaviour:
   m_ObjectHideFlags: 1

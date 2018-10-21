@@ -213,28 +213,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
-        type: 2}
-      propertyPath: projectileParticles
-      value: 
-      objectReference: {fileID: 4286472773735776, guid: 2853c88e54100d54897d818fd1770a75,
-        type: 2}
-    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
-        type: 2}
-      propertyPath: hurtParticles
-      value: 
-      objectReference: {fileID: 4309292654765818, guid: c09780713fff2764abeb2c436da9afbe,
-        type: 2}
-    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
-        type: 2}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: b4167293300a31b4ea6ab4cc79a313d0, type: 3}
-    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
-        type: 2}
-      propertyPath: dash
-      value: 
-      objectReference: {fileID: 8300000, guid: 357ba6b34e02e7b4cb1a43d269a7c696, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
   m_IsPrefabAsset: 0
