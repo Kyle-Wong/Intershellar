@@ -666,11 +666,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c09780713fff2764abeb2c436da9afbe, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &337309414 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4309292654765818, guid: c09780713fff2764abeb2c436da9afbe,
-    type: 2}
-  m_PrefabInternal: {fileID: 337309413}
 --- !u!1001 &380501169
 Prefab:
   m_ObjectHideFlags: 0
@@ -1278,12 +1273,14 @@ Prefab:
         type: 2}
       propertyPath: projectileParticles
       value: 
-      objectReference: {fileID: 1986759027}
+      objectReference: {fileID: 4286472773735776, guid: 2853c88e54100d54897d818fd1770a75,
+        type: 2}
     - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
         type: 2}
       propertyPath: hurtParticles
       value: 
-      objectReference: {fileID: 337309414}
+      objectReference: {fileID: 4309292654765818, guid: c09780713fff2764abeb2c436da9afbe,
+        type: 2}
     - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
         type: 2}
       propertyPath: playerLeapVelocity
@@ -1294,7 +1291,18 @@ Prefab:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
+        type: 2}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b4167293300a31b4ea6ab4cc79a313d0, type: 3}
+    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
+        type: 2}
+      propertyPath: dash
+      value: 
+      objectReference: {fileID: 8300000, guid: 357ba6b34e02e7b4cb1a43d269a7c696, type: 3}
+    m_RemovedComponents:
+    - {fileID: 82065976860829602, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1134121077 stripped
@@ -2039,11 +2047,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2853c88e54100d54897d818fd1770a75, type: 2}
   m_IsPrefabAsset: 0
---- !u!4 &1986759027 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4286472773735776, guid: 2853c88e54100d54897d818fd1770a75,
-    type: 2}
-  m_PrefabInternal: {fileID: 1986759026}
 --- !u!1 &1989311582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1253666959217676, guid: 21e44c028ed037f43a3fa2c60e554f42,
