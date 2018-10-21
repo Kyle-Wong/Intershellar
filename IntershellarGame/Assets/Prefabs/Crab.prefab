@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shellProjectilePrefab: {fileID: 4891189731188650, guid: 3f884fca667b0d94e9f9bf2a3df1d87f,
     type: 2}
-  timer: 3
+  timer: 3.25
   timing: 0
   drag: 0.99
   playerLeapVelocity: 7

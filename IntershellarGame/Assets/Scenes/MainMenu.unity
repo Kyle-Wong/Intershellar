@@ -1664,6 +1664,7 @@ MonoBehaviour:
   shellLossVelocity: 2
   pickupSound: {fileID: 0}
   dash: {fileID: 0}
+  exposureSound: {fileID: 0}
   v: {x: 2, y: 1}
 --- !u!4 &1732730952
 Transform:
@@ -1788,7 +1789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3272822446fa4f04684621c1dc362b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 25, y: 10}
+  velocity: {x: 10, y: 5}
 --- !u!1001 &1897549175
 Prefab:
   m_ObjectHideFlags: 0

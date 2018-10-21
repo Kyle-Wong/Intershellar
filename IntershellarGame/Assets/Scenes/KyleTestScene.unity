@@ -1188,21 +1188,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 95580370318486246, guid: 2b83c62d306a75f43abfcae2962f7f8c,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
-        type: 2}
-      propertyPath: exposureSound
-      value: 
-      objectReference: {fileID: 8300000, guid: c549876514d12444fb732ee2abc9f592, type: 3}
-    - target: {fileID: 114495454868360304, guid: 2b83c62d306a75f43abfcae2962f7f8c,
-        type: 2}
-      propertyPath: timer
-      value: 3.25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b83c62d306a75f43abfcae2962f7f8c, type: 2}
   m_IsPrefabAsset: 0

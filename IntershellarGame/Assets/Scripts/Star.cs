@@ -24,7 +24,8 @@ public class Star : MonoBehaviour {
             transform.position += Vector3.down * screenHeight;
         if (transform.position.y < mainCam.position.y- screenHeight/2)
             transform.position += Vector3.up * screenHeight;
-        transform.position += -1 * playerMovement.getVelocity() * parallaxScale;
+
+        transform.position += -1 * (Vector3)playerMovement.gameObject.GetComponent<Rigidbody2D>().velocity * parallaxScale;
 
 
 	}
