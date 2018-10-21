@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BrownShell
+  m_Controller: {fileID: 9100000, guid: bbc54f6a3552cde45a49b63d84d527ea, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4d20e56127d92e242a40e88b679aeabe, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4d20e56127d92e242a40e88b679aeabe, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ac0d30bf30733e34eb0e3d48beaafa7f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ad04be211ddd5f245926555581786b92, type: 2}

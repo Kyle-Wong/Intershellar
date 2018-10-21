@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour {
     private float lifeTimer = 0;
     public GameObject hurtParticle;
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -26,14 +26,17 @@ public class Projectile : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D other)
 	{
 		//kill enemies
-		if(other.CompareTag("Enemy"))
+		if(other.gameObject.CompareTag("Enemy"))
         {
 			Destroy(other.gameObject);
             GameObject particle = GameObject.Instantiate(hurtParticle, transform.position,Quaternion.identity);
             particle.GetComponent<ParticleSystem>().Play();
         }
-		if(!other.CompareTag("Player") && !other.CompareTag("Projectile"))
-			Destroy(gameObject);
+		if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Projectile"))
+        {
+            GetComponent<Animator>().SetTrigger("Break");
+			Destroy(gameObject, 2);
+        }
 	}
     public void setVelocity(Vector3 v)
     {
