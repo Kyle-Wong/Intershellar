@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 212282579286222808}
   - component: {fileID: 114731878248541210}
   - component: {fileID: 58788622502341524}
+  - component: {fileID: 95603759277010528}
   m_Layer: 0
   m_Name: shootingEnemy
   m_TagString: Enemy
@@ -86,6 +87,24 @@ CircleCollider2D:
   m_Offset: {x: -0.12611514, y: 0}
   serializedVersion: 2
   m_Radius: 0.51388484
+--- !u!95 &95603759277010528
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777484830189706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ac4224aebc8f9441864a09cc570a693, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114731878248541210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,8 +117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialRotation: 0
+  shootSE: {fileID: 8300000, guid: d0e5eae0aaf2c47449d5a56bae7f1ece, type: 3}
   bullet: {fileID: 1341571873857510, guid: c5da4db34676cfe45b58d847eb5505ef, type: 2}
-  shootInterval: 0.5
+  shootInterval: 3
 --- !u!212 &212282579286222808
 SpriteRenderer:
   m_ObjectHideFlags: 1
