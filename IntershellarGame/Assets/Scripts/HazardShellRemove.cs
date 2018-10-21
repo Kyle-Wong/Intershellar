@@ -42,8 +42,11 @@ public class HazardShellRemove : MonoBehaviour {
             //Removes a shell from the crab
             for (int i = 0; i < shellLossWorth; i++)
             {
-                movement.spawnLooseShell();
+                if (movement.shellCount > 0)
+                {
+                    movement.spawnLooseShell();
                     movement.Lose_Shell();
+                }
             }
             timing = timer;
         }
