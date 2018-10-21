@@ -789,6 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: 
+  dieSE: {fileID: 8300000, guid: f1a4dfe70548d344bae0bd4637e536c6, type: 3}
   gameWon: 0
   paused: 0
   winCanvas: {fileID: 223998224781073200}
